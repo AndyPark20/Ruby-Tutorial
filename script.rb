@@ -17,3 +17,21 @@ This exercise will ask for the users information
 # state= gets.chomp.capitalize!
 
 # print "Your full name is #{my_name} #{last_name} and currently lives in #{city}, #{state} "
+
+
+
+# for number in 1..4
+#   print "the numbers are #{number} \n"
+# end
+
+for num in 1..3
+  if num == 1
+    puts "1"
+  end
+  if num == 2
+    puts "2"
+  end
+  if num == 3
+    puts "3"
+  end
+end
