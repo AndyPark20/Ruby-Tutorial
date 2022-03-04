@@ -37,15 +37,26 @@ This exercise will ask for the users information
 
 
 
-i=0
-while i<10
-    i+=1
-    puts "Hello world"
-    if i == 2
-        puts "skipping #{i}"
-        next
-    end
-end
+# i=0
+# while i<10 do
+#     i+=1
+#     puts "Hello world"
+#     if i == 2
+#         puts "skipping #{i}"
+#         next
+#     end
+# end
 
+
+=begin
+Split method
+=end
+
+
+print "Please enter your first name"
+name = gets.chomp
+
+name_array =name.split('')
+print name_array
 
 
