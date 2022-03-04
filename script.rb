@@ -26,11 +26,26 @@ This exercise will ask for the users information
 
 
 
-print "Please enter your name: "
-my_name =gets.chomp
+# print "Please enter your name: "
+# my_name =gets.chomp
 
-if my_name.include? "andy"
-    my_name.gsub!(/an/, "Fan")
+# if my_name.include? "andy"
+#     my_name.gsub!(/an/, "Fan")
+# end
+
+# print "final name after revision #{my_name}"
+
+
+
+i=0
+while i<10
+    i+=1
+    puts "Hello world"
+    if i == 2
+        puts "skipping #{i}"
+        next
+    end
 end
 
-print "final name after revision #{my_name}"
+
+
