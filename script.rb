@@ -24,14 +24,13 @@ This exercise will ask for the users information
 #   print "the numbers are #{number} \n"
 # end
 
-for num in 1..3
-  if num == 1
-    puts "1"
-  end
-  if num == 2
-    puts "2"
-  end
-  if num == 3
-    puts "3"
-  end
+
+
+print "Please enter your name: "
+my_name =gets.chomp
+
+if my_name.include? "andy"
+    my_name.gsub!(/an/, "Fan")
 end
+
+print "final name after revision #{my_name}"
