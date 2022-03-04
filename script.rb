@@ -16,4 +16,4 @@ city = gets.chomp
 print "which state are you from:"
 state= gets.chomp
 
-print "Your name is #{my_name}"
+print "Your full name is #{my_name} #{last_name} and currently lives in #{city}, #{state}"
