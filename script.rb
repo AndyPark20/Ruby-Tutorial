@@ -53,10 +53,20 @@ Split method
 =end
 
 
-print "Please enter your first name"
-name = gets.chomp
+# print "Please enter your first name"
+# name = gets.chomp
 
-name_array =name.split('')
-print name_array
+# name_array =name.split('')
+# puts name_array
 
+puts "First Input: "
+text =gets.chomp
+puts "Second Input: "
+redact = gets.chomp
+
+words = text.split("")
+
+words.each do |x|
+  puts "Each letters are #{x}"
+  end
 
