@@ -59,14 +59,15 @@ Split method
 # name_array =name.split('')
 # puts name_array
 
-puts "First Input: "
-text =gets.chomp
-puts "Second Input: "
-redact = gets.chomp
+# puts "First Input: "
+# text =gets.chomp
+# puts "Second Input: "
+# redact = gets.chomp
 
-words = text.split("")
+# words = text.split("")
 
-words.each do |x|
-  puts "Each letters are #{x}"
-  end
+# words.each do |x|
+#   puts "Each letters are #{x}"
+#   end
 
+fruits = ["Banannas", "Apples", "Pears","Salmon"]
