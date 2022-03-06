@@ -80,5 +80,14 @@ Split method
 # end
 
 
-print "Please enter your first name: "
-first_name =gets.chomp
+# print "Please enter your first name: "
+# first_name =gets.chomp
+# first_name.downcase!
+
+# if first_name == 'andy'
+#   first_name.gsub!(/an/, "Pa")
+# else
+#   print "capital not found"
+# end
+
+#   print "your final name is #{first_name}"
