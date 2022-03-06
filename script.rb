@@ -91,3 +91,19 @@ Split method
 # end
 
 #   print "your final name is #{first_name}"
+
+=begin
+Ask the user for input
+and depending on the number check print out comments
+=end
+
+print "Please enter a number: "
+number = Integer(gets.chomp)
+
+if number == 1
+  puts "your number is equal to one"
+elsif number > 1 && number <8
+  puts "your number is between 2 and 8"
+else number
+  puts "your number is out of range"
+end
