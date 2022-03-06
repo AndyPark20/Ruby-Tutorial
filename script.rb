@@ -70,4 +70,15 @@ Split method
 #   puts "Each letters are #{x}"
 #   end
 
-fruits = ["Banannas", "Apples", "Pears","Salmon"]
+# fruits = ["Banannas", "Apples", "Pears","Salmon"]
+
+# fruits.each do |x|
+#   if x == "Salmon"
+#     fruits.replace(x,"Peaches")
+#   end
+#   puts x
+# end
+
+
+print "Please enter your first name: "
+first_name =gets.chomp
