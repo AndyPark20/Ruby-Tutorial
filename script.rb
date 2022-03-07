@@ -119,5 +119,7 @@ and depending on the number check print out comments
 
  pets = Hash.new
 
-print pets
+ #add hash key/value pair using Hash.new
+pets["solo"] = "dog"
  
+print pets
