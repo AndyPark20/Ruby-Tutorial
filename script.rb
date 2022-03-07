@@ -127,11 +127,24 @@ and depending on the number check print out comments
 #--------------------------------------------
 #loop thru objects or arrays to get values
 #array of array
-fruits = [["apples","pears"], ["oranges", "peaches"]]
+# fruits = [["apples","pears"], ["oranges", "peaches"]]
 
-fruits.each do |x|
-  x.each do |y|
-    puts y
-  end
+# fruits.each do |x|
+#   x.each do |y|
+#     puts y
+#   end
+# end
+
+
+#loop thru objects to get key value pair
+
+secret_identities = {
+  "The Batman" => "Bruce Wayne",
+  "Superman" => "Clark Kent",
+  "Wonder Woman" => "Diana Prince",
+  "Freakazoid" => "Dexter Douglas"
+}
+
+secret_identities.each do |x,y|
+  puts "#{x}: #{y}"
 end
-
