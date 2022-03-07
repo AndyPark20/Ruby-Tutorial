@@ -110,11 +110,14 @@ and depending on the number check print out comments
 
 
 #-------------------------------------------------------------
-# creating objects in Ruby
+# creating objects in Ruby (Hashes)
  my_object = {
    "name" => "andy",
    "location" =>"USA",
   "Ruby"=>true
  }
 
-puts my_object
+ pets = Hash.new
+
+print pets
+ 
