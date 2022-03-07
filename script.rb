@@ -97,13 +97,24 @@ Ask the user for input
 and depending on the number check print out comments
 =end
 
-print "Please enter a number: "
-number = Integer(gets.chomp)
+# print "Please enter a number: "
+# number = Integer(gets.chomp)
 
-if number == 1
-  puts "your number is equal to one"
-elsif number > 1 && number <8
-  puts "your number is between 2 and 8"
-else number
-  puts "your number is out of range"
-end
+# if number == 1
+#   puts "your number is equal to one"
+# elsif number > 1 && number <8
+#   puts "your number is between 2 and 8"
+# else number
+#   puts "your number is out of range"
+# end
+
+
+#-------------------------------------------------------------
+# creating objects in Ruby
+ my_object = {
+   "name" => "andy",
+   "location" =>"USA",
+  "Ruby"=>true
+ }
+
+puts my_object
