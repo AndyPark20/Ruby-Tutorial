@@ -138,13 +138,31 @@ and depending on the number check print out comments
 
 #loop thru objects to get key value pair
 
-secret_identities = {
-  "The Batman" => "Bruce Wayne",
-  "Superman" => "Clark Kent",
-  "Wonder Woman" => "Diana Prince",
-  "Freakazoid" => "Dexter Douglas"
-}
+# secret_identities = {
+#   "The Batman" => "Bruce Wayne",
+#   "Superman" => "Clark Kent",
+#   "Wonder Woman" => "Diana Prince",
+#   "Freakazoid" => "Dexter Douglas"
+# }
 
-secret_identities.each do |x,y|
-  puts "#{x}: #{y}"
+# secret_identities.each do |x,y|
+#   puts "#{x}: #{y}"
+# end
+
+#Palindromes
+
+print "Please enter your name: "
+name = gets.chomp
+
+array_name =name.split("").reverse!
+reversed_name_string =""
+
+array_name.each do |x|
+  reversed_name_string+=x
+end
+
+if reversed_name_string == name 
+  print "Palindroms found!"
+else
+  print "Sorry, the string is not a palindrome"
 end
