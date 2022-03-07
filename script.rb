@@ -111,15 +111,27 @@ and depending on the number check print out comments
 
 #-------------------------------------------------------------
 # creating objects in Ruby (Hashes)
- my_object = {
-   "name" => "andy",
-   "location" =>"USA",
-  "Ruby"=>true
- }
+#  my_object = {
+#    "name" => "andy",
+#    "location" =>"USA",
+#   "Ruby"=>true
+#  }
 
- pets = Hash.new
+#  pets = Hash.new
 
- #add hash key/value pair using Hash.new
-pets["solo"] = "dog"
+#  #add hash key/value pair using Hash.new
+# pets["solo"] = "dog"
  
-print pets
+# print pets
+
+#--------------------------------------------
+#loop thru objects or arrays to get values
+#array of array
+fruits = [["apples","pears"], ["oranges", "peaches"]]
+
+fruits.each do |x|
+  x.each do |y|
+    puts y
+  end
+end
+
