@@ -151,18 +151,36 @@ and depending on the number check print out comments
 
 #Palindromes
 
-print "Please enter your name: "
-name = gets.chomp
+# print "Please enter your name: "
+# name = gets.chomp
 
-array_name =name.split("").reverse!
-reversed_name_string =""
+# array_name =name.split("").reverse!
+# reversed_name_string =""
 
-array_name.each do |x|
-  reversed_name_string+=x
+# array_name.each do |x|
+#   reversed_name_string+=x
+# end
+
+# if reversed_name_string == name 
+#   print "Palindroms found!"
+# else
+#   print "Sorry, the string is not a palindrome"
+# end
+
+
+#----------------------working with Objects--------------
+
+
+
+profile = {
+  "name" =>"Andy",
+  "occupation" => "Engineer",
+  "age" => 26
+}
+
+puts profile["age"]
+
+profile.each do |x,y|
+  puts "keys are: #{x} #{y}"
 end
 
-if reversed_name_string == name 
-  print "Palindroms found!"
-else
-  print "Sorry, the string is not a palindrome"
-end
