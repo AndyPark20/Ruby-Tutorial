@@ -1,7 +1,21 @@
-#--------- Methods---------
-def printHello
-    print "Hello"
+# #--------- Methods---------
+# def printHello
+#     print "Hello"
+# end
+
+
+# printHello()
+
+
+# ------- Sorting ------
+
+fruits = ["bananas", "apples", "pear"]
+
+def sort_it(array)
+    array.sort! do |first,second|
+       first <=> second
+    end
+    puts array
 end
 
-
-printHello()
+sort_it(fruits)
