@@ -172,15 +172,39 @@ and depending on the number check print out comments
 
 
 
-profile = {
-  "name" =>"Andy",
-  "occupation" => "Engineer",
-  "age" => 26
-}
+# profile = {
+#   "name" =>"Andy",
+#   "occupation" => "Engineer",
+#   "age" => 26
+# }
 
-puts profile["age"]
+# puts profile["age"]
 
-profile.each do |x,y|
-  puts "keys are: #{x} #{y}"
+# profile.each do |x,y|
+#   if(y == "Engineer")
+#     puts "#{x}"
+#   end
+# end
+
+
+print "Please enter a sentence:"
+feedback =gets.chomp
+array = feedback.split()
+
+hash_it_out =Hash.new(0)
+
+array.each do |x|
+  if(hash_it_out[x])
+    hash_it_out[x]+=1
+  else
+    hash_it_out[x]
+  end
 end
 
+hash_it_out = hash_it_out.sort_by do |x,y|
+  y
+end
+
+
+hash_it_out.reverse!
+print hash_it_out
