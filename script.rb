@@ -187,24 +187,24 @@ and depending on the number check print out comments
 # end
 
 
-print "Please enter a sentence:"
-feedback =gets.chomp
-array = feedback.split()
+# print "Please enter a sentence:"
+# feedback =gets.chomp
+# array = feedback.split()
 
-hash_it_out =Hash.new(0)
+# hash_it_out =Hash.new(0)
 
-array.each do |x|
-  if(hash_it_out[x])
-    hash_it_out[x]+=1
-  else
-    hash_it_out[x]
-  end
-end
+# array.each do |x|
+#   if(hash_it_out[x])
+#     hash_it_out[x]+=1
+#   else
+#     hash_it_out[x]
+#   end
+# end
 
-hash_it_out = hash_it_out.sort_by do |x,y|
-  y
-end
+# hash_it_out = hash_it_out.sort_by do |x,y|
+#   y
+# end
 
 
-hash_it_out.reverse!
-print hash_it_out
+# hash_it_out.reverse!
+# print hash_it_out
