@@ -59,6 +59,11 @@ end
 =end
 
 #Print values
-move_ratings.each_key do |x|
-    puts "Rating for the movie is #{x}"
-end
+# movie_ratings.each_value do |x|
+#     puts "Rating for the movie is #{x}"
+# end
+
+#symbol practive
+my_name ="andy"
+symbol = my_name.to_sym
+puts symbol.object_id
