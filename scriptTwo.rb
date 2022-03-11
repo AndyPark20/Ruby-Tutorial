@@ -23,8 +23,18 @@
 
 #function review
 
-def printHello(name)
-    print "Hello #{name}"
+# def printHello(name)
+#     print "Hello #{name}"
+# end
+
+# printHello('andy')
+
+#Function to sort
+def sort_it(array)
+    array.sort! do |x,y|
+        y <=>x
+    end
+    print array
 end
 
-printHello('andy')
+sort_it([7,10,1,5,6])
