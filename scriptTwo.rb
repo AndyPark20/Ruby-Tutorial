@@ -64,6 +64,11 @@ end
 # end
 
 #symbol practive
-my_name ="andy"
-symbol = my_name.to_sym
-puts symbol.object_id
+# my_name ="andy"
+# symbol = my_name.to_sym
+# puts symbol.object_id
+
+
+movie_ratings.each do |x,y|
+    puts "#{x} has a rating of #{y}"
+end
