@@ -69,6 +69,53 @@ end
 # puts symbol.object_id
 
 
-movie_ratings.each do |x,y|
-    puts "#{x} has a rating of #{y}"
+# movie_ratings.each do |x,y|
+#     puts "#{x} has a rating of #{y}"
+# end
+
+# movie_ratings.each do |x,y|
+#     if y >=4
+#         puts "#{x} has a rating of #{y}"
+#     end
+# end
+
+# movie_ratings.select do |x,y|
+#     if y >=4
+#         puts "select shown #{x} has a rating of #{y}"
+#     end
+# end 
+
+#map
+
+array =[1,2,3,4,5];
+
+# def lets_array(params)
+#     params.map do |x|
+#         if x>1 && x<4
+#             x
+#     end
+# end
+# end
+
+# print lets_array(array)
+
+# def lets_select(params)
+#      params.select do |x|
+#          if x>1 && x<4
+#              x
+#      end
+#  end
+#  end
+
+#  print lets_select(array)
+
+
+ def lets_each(params)
+    params.each do |x|
+        if x>1 && x<4
+            x
+    end
 end
+end
+
+print lets_each(array)
