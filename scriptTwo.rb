@@ -129,18 +129,23 @@ end
 # end
 
 
-movie_library = Hash.new
+# movie_library = Hash.new
 
-puts "What would you like to do?"
-command = gets.chomp
+# puts "What would you like to do?"
+# command = gets.chomp
 
-case command
-when "add"
-    puts "What is the movie you want to add?"
-    movie_add =gets.chomp
-    puts "What score you want to give?"
-    movie_rating = gets.chomp
-    movie_library[movie_add.to_s] = movie_rating
-end
+# case command
+# when "add"
+#     puts "What is the movie you want to add?"
+#     movie_add =gets.chomp
+#     puts "What score you want to give?"
+#     movie_rating = gets.chomp
+#     movie_library[movie_add.to_s] = movie_rating
+# end
 
-puts movie_library
+# puts movie_library
+
+
+my_name ="andy"
+
+puts !my_name == my_name
