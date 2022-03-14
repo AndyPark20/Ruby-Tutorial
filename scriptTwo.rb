@@ -110,13 +110,37 @@ end
 # print loop_map(my_array)
 
 
-hash ={
-    movies: "avengers",
-    score: 2,
-    stream: yes
-}
+# hashing ={
+#     'movies' => "avengers",
+#     'score' => 2,
+#     'stream' => "yes"
+# }
 
-puts "what is your favorite movie?"
-response = gets.chomp
 
-            
+
+# puts "what is your favorite movie?"
+# response = gets.chomp
+
+# case response
+# when "avengers"
+#     puts "great I like that move too, the score for that movie is #{hashing['score']}"
+# else
+#     puts "Sorry I don't watch #{response}"
+# end
+
+
+movie_library = Hash.new
+
+puts "What would you like to do?"
+command = gets.chomp
+
+case command
+when "add"
+    puts "What is the movie you want to add?"
+    movie_add =gets.chomp
+    puts "What score you want to give?"
+    movie_rating = gets.chomp
+    movie_library[movie_add.to_s] = movie_rating
+end
+
+puts movie_library
