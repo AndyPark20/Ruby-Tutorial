@@ -87,35 +87,36 @@ end
 
 #map
 
-array =[1,2,3,4,5];
+# #select
+# my_array= [1,2,3,4]
 
-# def lets_array(params)
-#     params.map do |x|
-#         if x>1 && x<4
+# # def loop_each(array)
+# #      array.each do |x|
+# #         puts "#{x} + 2 = #{x+2}"
+# #      end
+# #  end
+
+# # print loop_each(my_array)
+
+
+# def loop_map(array)
+#     array.map do |x|
+#         if x >= 3
 #             x
+#         end
 #     end
 # end
-# end
 
-# print lets_array(array)
-
-# def lets_select(params)
-#      params.select do |x|
-#          if x>1 && x<4
-#              x
-#      end
-#  end
-#  end
-
-#  print lets_select(array)
+# print loop_map(my_array)
 
 
- def lets_each(params)
-    params.each do |x|
-        if x>1 && x<4
-            x
-    end
-end
-end
+hash ={
+    movies: "avengers",
+    score: 2,
+    stream: yes
+}
 
-print lets_each(array)
+puts "what is your favorite movie?"
+response = gets.chomp
+
+            
