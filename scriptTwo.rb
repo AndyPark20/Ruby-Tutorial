@@ -161,6 +161,13 @@ end
 
 # hello('andy')
 
-"L".upto("Z") do |x|
-    puts x
-end
+# "L".upto("Z") do |x|
+#     puts x
+# end
+
+puts "Please enter your zipcode: "
+answer = gets.chomp
+
+case answer 
+    when "93906" then puts "You are from Salinas!"
+    end
