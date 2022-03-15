@@ -146,6 +146,17 @@ end
 # puts movie_library
 
 
-my_name ="andy"
+# my_name ="andy"
 
-puts !my_name == my_name
+# puts !my_name == my_name
+
+
+
+# Creating Functions
+
+def hello(name)
+     print "hello #{name}"
+
+end
+
+hello('andy')
