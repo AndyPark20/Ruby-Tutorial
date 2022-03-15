@@ -154,9 +154,13 @@ end
 
 # Creating Functions
 
-def hello(name)
-     print "hello #{name}"
+# def hello(name)
+#      print "hello #{name}"
 
+# end
+
+# hello('andy')
+
+"L".upto("Z") do |x|
+    puts x
 end
-
-hello('andy')
