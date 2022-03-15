@@ -165,9 +165,21 @@ end
 #     puts x
 # end
 
-puts "Please enter your zipcode: "
-answer = gets.chomp
+# puts "Please enter your zipcode: "
+# answer = gets.chomp
 
-case answer 
-    when "93906" then puts "You are from Salinas!"
-    end
+# case answer 
+#     when "93906" then puts "You are from Salinas!"
+#     end
+
+x ="Hello"
+
+for a in 1..5 do
+    puts a
+end
+
+#OR
+
+
+5.times {puts "hello"}
+
