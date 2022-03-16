@@ -55,13 +55,24 @@
 
 # check_number(array)
 
-array =[5,4,6,10]
+# array =[5,4,6,10]
 
-array << 2
+# array << 2
 
-array.sort do |x,y|
-    x <=> y
+# array.sort do |x,y|
+#     x <=> y
+# end
+
+# puts array
+
+array =[1,2,3,4,5]
+
+revised_array = array.collect do |num| 
+        
+    if num == 2 
+        num 
+    end
 end
 
-puts array
 
+print revised_array
