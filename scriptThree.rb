@@ -80,12 +80,26 @@
 
 #procs
 
-array = [1,2,3,4,5]
+# array = [1,2,3,4,5]
 
-which_is_more_than_three = Proc.new {|x| x > 3}
+# which_is_more_than_three = Proc.new {|x| x > 3}
 
-solution_array = array.select(&which_is_more_than_three)
+# solution_array = array.select(&which_is_more_than_three)
 
-print solution_array.is_a? Array
+# print solution_array.is_a? Array
 
+
+#yields
+
+def greetings(name)
+    puts "Initializing..."
+    yield("Jennifer")
+    puts "Hello!"
+    yield(name)
+    puts "Custom Hello!"
+end
+
+greetings("Andy") {
+    |x| puts "Hello there #{x}"
+}
 
