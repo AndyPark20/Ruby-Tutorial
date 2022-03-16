@@ -172,14 +172,26 @@ end
 #     when "93906" then puts "You are from Salinas!"
 #     end
 
-x ="Hello"
+# x ="Hello"
 
-for a in 1..5 do
-    puts a
-end
+# for a in 1..5 do
+#     puts a
+# end
 
-#OR
+# #OR
+
+# 5.times {puts "hello"}
+
+puts 1 >2 ? "One is definately small than 2" : "2 is NOT smaller than 1"
 
 
-5.times {puts "hello"}
 
+
+if (Invoca.Tools.readUrl("gclid")) {
+    options.poolParams = {
+      utm_medium: "cpc",
+      utm_source: "google"
+    };
+  }
+
+  
