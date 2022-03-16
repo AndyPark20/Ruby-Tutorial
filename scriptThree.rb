@@ -65,14 +65,27 @@
 
 # puts array
 
-array =[1,2,3,4,5]
+# array =[1,2,3,4,5]
 
-revised_array = array.collect do |num| 
+# revised_array = array.collect do |num| 
         
-    if num == 2 
-        num 
-    end
-end
+#     if num == 2 
+#         num 
+#     end
+# end
 
 
-print revised_array
+# print revised_array
+
+
+#procs
+
+array = [1,2,3,4,5]
+
+which_is_more_than_three = Proc.new {|x| x > 3}
+
+solution_array = array.select(&which_is_more_than_three)
+
+print solution_array.is_a? Array
+
+
