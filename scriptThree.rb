@@ -57,8 +57,10 @@
 
 array =[5,4,6,10]
 
-array.sort! do |x,y|
-    y <=> x
+array << 2
+
+array.sort do |x,y|
+    x <=> y
 end
 
 puts array
