@@ -105,12 +105,19 @@
 
 #yields
 
-def addition(num)
-    puts "Welcome to numbers addition!"
-    yield(num)
-    puts "Custom number"
-    yield(15)
-    puts "static number!"
-end
+# def addition(num)
+#     puts "Welcome to numbers addition!"
+#     yield(num)
+#     puts "Custom number"
+#     yield(15)
+#     puts "static number!"
+# end
 
-addition(3){|x| puts x+30}
+# addition(3){|x| puts x+30}
+
+#Proc
+
+array= [1,2,3,4,5]
+addition = Proc.new {|x| puts x+15}
+
+final_array = array.select(&addition)
