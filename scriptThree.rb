@@ -91,15 +91,26 @@
 
 #yields
 
-def greetings(name)
-    puts "Initializing..."
-    yield("Jennifer")
-    puts "Hello!"
-    yield(name)
-    puts "Custom Hello!"
+# def greetings(name)
+#     puts "Initializing..."
+#     yield("Jennifer")
+#     puts "Hello!"
+#     yield(name)
+#     puts "Custom Hello!"
+# end
+
+# greetings("Andy") {
+#     |x| puts "Hello there #{x}"
+# }
+
+#yields
+
+def addition(num)
+    puts "Welcome to numbers addition!"
+    yield(num)
+    puts "Custom number"
+    yield(15)
+    puts "static number!"
 end
 
-greetings("Andy") {
-    |x| puts "Hello there #{x}"
-}
-
+addition(3){|x| puts x+30}
