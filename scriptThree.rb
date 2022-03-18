@@ -127,18 +127,37 @@
 
 #Proc --> Doesn't care about arguments and returns immediately by passing the control function
 
-def procing(name)
-    test = Proc.new {return "Hello #{name}"}
-    test.call
-    puts "Goodbye!"
+# def procing(name)
+#     test = Proc.new {return "Hello #{name}"}
+#     test.call
+#     puts "Goodbye!"
+# end
+
+
+# def lambdaing(values)
+#     testing =lambda {return "Hello #{values}"}
+#     testing.call
+#     puts "Goodbye!"
+# end
+
+# puts procing("Andy")
+# puts lambdaing("Emily")
+
+
+
+#Classes
+
+class Andy 
+    def initialize(location, age, profession)
+        @location = location
+        @age = age
+        @profession = profession
+        return @location
+    end
 end
 
 
-def lambdaing(values)
-    testing =lambda {return "Hello #{values}"}
-    testing.call
-    puts "Goodbye!"
-end
+class Revised_andy < Andy;end
 
-puts procing("Andy")
-puts lambdaing("Emily")
+puts Revised_andy
+
