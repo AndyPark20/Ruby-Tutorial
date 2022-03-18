@@ -152,12 +152,11 @@ class Andy
         @location = location
         @age = age
         @profession = profession
-        return @location
+        puts @location
     end
 end
 
 
-class Revised_andy < Andy;end
+revised = Andy.new("usa",25, "engineer")
 
-puts Revised_andy
 
