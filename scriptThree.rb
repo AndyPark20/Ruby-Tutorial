@@ -117,7 +117,28 @@
 
 #Proc
 
-array= [1,2,3,4,5]
-addition = Proc.new {|x| puts x+15}
+# array= [1,2,3,4,5]
+# addition = Proc.new {|x| puts x+15}
 
-final_array = array.select(&addition)
+# final_array = array.select(&addition)
+
+
+#Proc vs #Bloc
+
+#Proc --> Doesn't care about arguments and returns immediately by passing the control function
+
+def procing(name)
+    test = Proc.new {return "Hello #{name}"}
+    test.call
+    puts "Goodbye!"
+end
+
+
+def lambdaing(values)
+    testing =lambda {return "Hello #{values}"}
+    testing.call
+    puts "Goodbye!"
+end
+
+puts procing("Andy")
+puts lambdaing("Emily")
