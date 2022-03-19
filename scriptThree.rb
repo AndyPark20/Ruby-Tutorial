@@ -161,6 +161,7 @@
 
 
 class Human
+    @@person_tracked = {}
 
     def initialization(name,age,profession)
     @name = name
@@ -168,10 +169,25 @@ class Human
     @profression = profession
     puts "#{@name} is #{@age} and job is #{@profression}"
     end
+
+    def habitat_traits(name,planet)
+        @name = name
+        @planet = planet
+        @@person_tracked[@name] = @planet 
+        print @@person_tracked
+    end
+
 end
 
-person = Human.new
-person.initialization("andy",26,"engineer")
+class Invidial < Human
+end
+
+person = Invidial.new
+person.habitat_traits("tony","avengers")
+
+
+
+
 
 
 
