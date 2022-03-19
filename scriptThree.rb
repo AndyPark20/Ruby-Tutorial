@@ -145,18 +145,34 @@
 
 
 
-#Classes
+# #Classes
 
-class Andy 
-    def initialize(location, age, profession)
-        @location = location
-        @age = age
-        @profession = profession
-        puts @location
+# class Andy 
+#     def initialize(location, age, profession)
+#         @location = location
+#         @age = age
+#         @profession = profession
+#         puts @location
+#     end
+# end
+
+
+# revised = Andy.new("usa",25, "engineer")
+
+
+class Human
+
+    def initialization(name,age,profession)
+    @name = name
+    @age = age
+    @profression = profession
+    puts "#{@name} is #{@age} and job is #{@profression}"
     end
 end
 
+person = Human.new
+person.initialization("andy",26,"engineer")
 
-revised = Andy.new("usa",25, "engineer")
+
 
 
