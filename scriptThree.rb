@@ -184,6 +184,7 @@ end
 
 person = Invidial.new
 person.habitat_traits("tony","avengers")
+person.initialization("andy",26,"engineer")
 
 
 
