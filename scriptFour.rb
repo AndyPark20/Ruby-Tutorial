@@ -17,18 +17,40 @@
 
 # end
 
-module CalculateNumber
-    def add_it(num,numTwo)
-    puts num + numTwo
-    end
+# module CalculateNumber
+#     def add_it(num,numTwo)
+#     puts num + numTwo
+#     end
+# end
+
+
+# class Lets_Operate
+# include CalculateNumber
+# end
+
+
+# kid = Lets_Operate.new
+
+# kid.add_it(2,4)
+
+
+class Product
+
+    attr_accessor :name, :age
+
+   def initialize(name, age)
+    @name = name
+    @age = age
+   end
+
 end
 
 
-class Lets_Operate
-include CalculateNumber
-end
+instances = Product.new('andy',33)
+
+instances.name = "Jaeremy"
+
+print instances.name
 
 
-kid = Lets_Operate.new
 
-kid.add_it(2,4)
