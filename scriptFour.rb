@@ -43,14 +43,16 @@ class Product
     @age = age
    end
 
+   public
+   def info
+    print "#{@name} is #{age}"
+   end
 end
 
 
-instances = Product.new('andy',33)
+instances = Product.new('andy',25)
 
-instances.name = "Jaeremy"
-
-print instances.name
+instances.info
 
 
 
