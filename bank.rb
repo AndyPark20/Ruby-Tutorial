@@ -26,7 +26,12 @@ class Bank
     public
     def check_credentials
         @@bank_customer.each do |x|
-            puts x
+            #looping thru objects
+            x.each do |key,value|
+                if (value == @username)
+                    print x[:name]
+                end
+            end
         end
     end
 end
