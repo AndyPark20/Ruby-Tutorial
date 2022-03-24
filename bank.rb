@@ -10,8 +10,8 @@
 
 
 class Bank
-   
     @@bank_customer = [
+
         {name:'Andy',username:"ruby123", password:"hello123", balance:500},
         {name:'Jennifer', username:"javascript123",password:"goodbye123", balance:123_456_123}
     ]
@@ -21,7 +21,7 @@ class Bank
     #name of the account
     @@name = ""
     #options that user wants to chose withdrawl/deposit
-    @@
+    @@user_selection=""
 
     def initialize(username, password)
         @username = username
@@ -54,6 +54,20 @@ class Bank
         credential_notification()
         if @@account_credential_check
             print "What would you like to do?"
+            @@user_selection = gets.chomp
+        end
+    end
+
+    #Options functionality
+    public 
+    def options_functions
+        options()
+        if @@user_selection == 'check balance'
+            @@bank_customer.each do |x|
+                if x[:name] == @@name
+                    puts "Your Current Blanace is: $#{x[:balance]}"
+                end
+            end
         end
     end
 end
@@ -66,4 +80,4 @@ user_password = gets.chomp
 
 check_valid = Bank.new(user_name,user_password)
 
-check_valid.options
+check_valid.options_functions
