@@ -10,12 +10,14 @@
 
 
 class Bank
-    attr_reader :username, :password
-
+   
     @@bank_customer = [
         {name:'Andy',username:"ruby123", password:"hello123", balance:500},
         {name:'Jennifer', username:"javascript123",password:"goodbye123", balance:123_456_123}
     ]
+
+    @@account_credential_check =false
+    @@name = ""
 
     def initialize(username, password)
         @username = username
@@ -23,15 +25,22 @@ class Bank
     end
 
     #check user credentials
-    public
+    private
     def check_credentials
         @@bank_customer.each do |x|
            if ((x[:username]== @username) && (x[:password] == @password))
-            return puts "welcome #{x[:name]}"
-           else
-            return puts "Username and password don't match, please try again"
-           end  
+            @@account_credential_check = true;
+            @@name =x[:name]
+           end 
         end
+    end
+
+    public
+    def credential_notification
+        check_credentials()
+       
+        #Check if the credentials are correct
+       puts @@account_credential_check ? "Welcome #{@@name}!" : "Invalid Login!"
     end
 end
 
@@ -43,4 +52,4 @@ user_password = gets.chomp
 
 check_valid = Bank.new(user_name,user_password)
 
-check_valid.check_credentials
+check_valid.credential_notification
