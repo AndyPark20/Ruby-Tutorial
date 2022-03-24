@@ -26,17 +26,21 @@ class Bank
     public
     def check_credentials
         @@bank_customer.each do |x|
-            #looping thru objects
-            x.each do |key,value|
-                if (value == @username)
-                    print x[:name]
-                end
-            end
+           if ((x[:username]== @username) && (x[:password] == @password))
+            return puts "welcome #{x[:name]}"
+           else
+            return puts "Username and password don't match, please try again"
+           end  
         end
     end
 end
 
 
-check_valid = Bank.new('ruby123','hellow123')
+print "Please enter your username: "
+user_name = gets.chomp
+print "Please enter your password: "
+user_password = gets.chomp
+
+check_valid = Bank.new(user_name,user_password)
 
 check_valid.check_credentials
