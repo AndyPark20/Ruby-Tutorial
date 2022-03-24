@@ -65,9 +65,11 @@ class Bank
         if @@user_selection == 'check balance'
             @@bank_customer.each do |x|
                 if x[:name] == @@name
-                    puts "Your Current Blanace is: $#{x[:balance]}"
+                    puts "Your Current Balance is: $#{x[:balance]}"
                 end
             end
+        else
+            puts "Invalid option, Please try again"
         end
     end
 end
