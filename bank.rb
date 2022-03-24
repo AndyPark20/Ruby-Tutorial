@@ -16,8 +16,12 @@ class Bank
         {name:'Jennifer', username:"javascript123",password:"goodbye123", balance:123_456_123}
     ]
 
+    #Credentials Check
     @@account_credential_check =false
+    #name of the account
     @@name = ""
+    #options that user wants to chose withdrawl/deposit
+    @@
 
     def initialize(username, password)
         @username = username
@@ -50,7 +54,7 @@ class Bank
         credential_notification()
         if @@account_credential_check
             print "What would you like to do?"
-            end
+        end
     end
 end
 
