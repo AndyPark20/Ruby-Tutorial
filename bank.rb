@@ -24,7 +24,7 @@ class Bank
         @password = password
     end
 
-    #check user credentials
+    #Check user credentials
     private
     def check_credentials
         @@bank_customer.each do |x|
@@ -35,12 +35,22 @@ class Bank
         end
     end
 
+    #Return results from checking user credentials
     public
     def credential_notification
         check_credentials()
        
         #Check if the credentials are correct
        puts @@account_credential_check ? "Welcome #{@@name}!" : "Invalid Login!"
+    end
+
+    #Options user can choose after credentials has been cleared
+    public
+    def options
+        credential_notification()
+        if @@account_credential_check
+            print "What would you like to do?"
+            end
     end
 end
 
@@ -52,4 +62,4 @@ user_password = gets.chomp
 
 check_valid = Bank.new(user_name,user_password)
 
-check_valid.credential_notification
+check_valid.options
