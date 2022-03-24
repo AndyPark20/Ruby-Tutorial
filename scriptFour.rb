@@ -34,25 +34,28 @@
 # kid.add_it(2,4)
 
 
-class Product
+# class Product
 
-    attr_accessor :name, :age
+#     attr_accessor :name, :age
 
-   def initialize(name, age)
-    @name = name
-    @age = age
-   end
+#    def initialize(name, age)
+#     @name = name
+#     @age = age
+#    end
 
-   public
-   def info
-    print "#{@name} is #{age}"
-   end
-end
-
-
-instances = Product.new('andy',25)
-
-instances.info
+#    public
+#    def info
+#     print "#{@name} is #{age}"
+#    end
+# end
 
 
+# instances = Product.new('andy',25)
 
+# instances.info
+
+
+print "what is your name?"
+name = gets.chomp
+
+puts name
