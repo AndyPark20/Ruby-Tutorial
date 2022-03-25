@@ -68,6 +68,24 @@ class Bank
                     puts "Your Current Balance is: $#{x[:balance]}"
                 end
             end
+        elsif @@user_selection == 'deposit'
+            puts "How much do you want to deposit?"
+            @deposit_amount =gets.chomp
+
+            @@bank_customer.each do |x|
+                if x[:name] == @@name
+                    puts "Your Balance is now $#{x[:balance] + @deposit_amount.to_i}"
+                end
+            end
+        elsif @@user_selection == 'withdrawl'
+            puts "How much do you want to withdrawl?"
+            @withdrawl_amount =gets.chomp
+
+            @@bank_customer.each do |x|
+                if x[:name] == @@name
+                    puts "Your Balance is now $#{x[:balance] - @withdrawl_amount.to_i}"
+                end
+            end
         else
             puts "Invalid option, Please try again"
         end
