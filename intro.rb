@@ -29,3 +29,22 @@ puts initial_start * finish;
 
 puts "Hello What is your name?"
 print "Hello My name is Ruby!"
+
+
+#Methods (Length)
+
+string = "I love cars"
+puts string.length
+
+#Methods (reverse Method)
+string = "GMA"
+puts string.reverse;
+
+
+#Methods (downcase and upcase);
+down = "OrANGE"
+up = "apples"
+
+
+puts down.downcase
+puts up.upcase
