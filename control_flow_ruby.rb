@@ -19,4 +19,5 @@ end
 #questions
 ##javascript is else if and ruby is elsif
 ##unless is a revese of if and elsif!
+## does true overwrite false?!?!? look at combining boolean operators
 
