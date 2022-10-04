@@ -28,4 +28,4 @@ state = gets.chomp.upcase
 
 #questions
 #Re-visit chomp
-#capitalize vs capitalize! 
+#capitalize vs capitalize! (looks like if you DO NOT USE ! then it will make a copy of the variable and do the method)
