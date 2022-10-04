@@ -21,3 +21,11 @@ city = gets.chomp
 
 print "Which providence are you from?"
 state = gets.chomp.upcase
+
+
+
+
+
+#questions
+#Re-visit chomp
+#capitalize vs capitalize! 
