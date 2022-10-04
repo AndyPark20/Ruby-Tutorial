@@ -48,3 +48,27 @@ up = "apples"
 
 puts down.downcase
 puts up.upcase
+
+#use # to write single comment!
+#Hello this is just the start of the journey
+
+=begin
+This is for multiline
+=end
+
+#variables and Data Types
+my_name = "John Smith"
+my_age = 32
+favorite_food_pizza= true
+
+
+
+
+
+
+
+
+#questions
+#Can we have semi colon at the end to show that the code is completed
+#RE-discuss puts and print
+#any difference in naming variables compared to Javascript?
