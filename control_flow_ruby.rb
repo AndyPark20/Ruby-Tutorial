@@ -8,8 +8,15 @@ elsif 10==5
     print "this is NOT TRUE"
 end
 
+hungary = false;
 
+unless hungary
+    print "Gonna write code"
+else
+    print "Time to eat!"
+end
 
 #questions
 ##javascript is else if and ruby is elsif
+##unless is a revese of if and elsif!
 
