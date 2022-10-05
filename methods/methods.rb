@@ -8,6 +8,8 @@ capitalize= capitalizes the first letter
 include? = looks for a specific value and if found within the value it will return true else it will return false;
 gsub! = replace a value with a new value
 split(",") = splits a string based off the parameter, and will return an array
+sort_by = sorts values from smallest to largest (Its like sortby)
+to_s = converts number to string
 
 
 #loops
@@ -48,6 +50,9 @@ Hash.new creates a new hash Object
 ##Arrays
 #no questions
 
+###METHODS
+
+
 
 
 
@@ -58,3 +63,4 @@ Hash.new creates a new hash Object
 #Project on loops and iteration REDACTED
 #Why does Hash.new == {} equals true? in Javascript its false?
 #ON Slide 1 for Create a Histogram why is there (0) next to Hash.new? (Looks like its just a default value in case the seach value is not there)
+#What does sort_by return?????

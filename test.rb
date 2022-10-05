@@ -32,10 +32,12 @@
 # print "Dear #{user_first_name}, we have successfully updated your residency to #{user_current_location}"
 
 
-puts "Text Please:"
-text = gets.chomp
+def calculator(n)
+  if n <0
+    print "#{} is less than Zero"
+  else
+    print "#{} is greater than Zero"
+  end
+end
 
-words = text.split(" ")
-frequencies = Hash.new(0)
-
-puts frequencies["kitty"]
+calculator(9)
