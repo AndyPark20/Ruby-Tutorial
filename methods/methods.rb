@@ -18,7 +18,11 @@ For loop = will loop as long as the condition is true (.. will go to the highest
 #Iterator loops
 loop do = ????
 times do = similar to for loop, but very compact
-Each do (Array) =Used to loops thru an array, {} can be deleted with the word do (i.e. array.each do |x|)
+Each do (Array) =Used to loop thru an array, {} can be deleted with the word do (i.e. array.each do |x|)
+Each do (Objects ) = Used to loop thru an object, there is a second argument |x,y|
+
+#Objects
+Hash.new creates a new hash Object
 
 
 
@@ -36,9 +40,13 @@ Each do (Array) =Used to loops thru an array, {} can be deleted with the word do
 #Unlike Javascript incrementing or decrementing only works with += -= rather than ++ or --
 #when to use loop do vs for loop
 
+
+###Objects
+#Key Values pairs are paired by => NOT : like Javascript
+
 ###Data Structures
 ##Arrays
-
+#no questions
 
 
 
@@ -48,3 +56,5 @@ Each do (Array) =Used to loops thru an array, {} can be deleted with the word do
 #Need to go over
 #While vs until
 #Project on loops and iteration REDACTED
+#Why does Hash.new == {} equals true? in Javascript its false?
+#ON Slide 1 for Create a Histogram why is there (0) next to Hash.new?

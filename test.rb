@@ -32,18 +32,10 @@
 # print "Dear #{user_first_name}, we have successfully updated your residency to #{user_current_location}"
 
 
-print "What Text?"
+puts "Text Please:"
 text = gets.chomp
-print "Redact what word?"
-redact = gets.chomp
 
+words = text.split(" ")
+frequencies = Hash.new(0)
 
-text = "Hello world"
-redacted = text.split(" ")
-
-
-redacted.each do |x|
-    if x == redact
-    puts x
-    end
-end
+puts frequencies
