@@ -17,3 +17,4 @@ gsub! = replace a value with a new value
 # ! in method are dangerous methods, meaning that it will mutate the original value if
 # IF ! is not in an method, this means that it is safe method, it will not change the original value
 # ?in a method is trying to say that it will show true or false value.
+# gets also adds a blank line just like puts
