@@ -15,10 +15,18 @@ print "Hi #{user_first_name}, you currently live in #{user_current_location}, ho
 user_confirmation = gets.chomp
 
 
-unless user_confirmation
+# unless user_confirmation
+#     print "Ok, we will cancel updating your residency, please try again later"
+# else
+#     user_current_location.gsub!(user_current_location,user_preferred_location)
+# end
+
+if !user_confirmation && user_current_location
     print "Ok, we will cancel updating your residency, please try again later"
+
 else
     user_current_location.gsub!(user_current_location,user_preferred_location)
+    
 end
 
 print "Dear #{user_first_name}, we have successfully updated your residency to #{user_current_location}"
