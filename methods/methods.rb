@@ -57,4 +57,4 @@ Hash.new creates a new hash Object
 #While vs until
 #Project on loops and iteration REDACTED
 #Why does Hash.new == {} equals true? in Javascript its false?
-#ON Slide 1 for Create a Histogram why is there (0) next to Hash.new?
+#ON Slide 1 for Create a Histogram why is there (0) next to Hash.new? (Looks like its just a default value in case the seach value is not there)
