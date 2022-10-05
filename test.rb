@@ -31,14 +31,12 @@
 
 # print "Dear #{user_first_name}, we have successfully updated your residency to #{user_current_location}"
 
-books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
 
 
-def sorted_it(arr)
-  arr.each do |x|
-    puts x
-  end
+
+my_array =[1,2,3,4]
+
+my_array.each do |x,y|
+  puts y
 end
 
-
-print sort_it(books)

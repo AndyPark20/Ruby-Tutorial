@@ -71,6 +71,8 @@ Hash.new creates a new hash Object
 #While vs until
 #Project on loops and iteration REDACTED
 #Why does Hash.new == {} equals true? in Javascript its false?
+# Use do to delete {}?
 #ON Slide 1 for Create a Histogram why is there (0) next to Hash.new? (Looks like its just a default value in case the seach value is not there)
 #What does sort_by return?????
 #Blocks vs Methods
+#when calling method do you need to put into ()? or don't need it?
