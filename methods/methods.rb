@@ -7,7 +7,7 @@ gets = gets response from the user
 capitalize= capitalizes the first letter
 include? = looks for a specific value and if found within the value it will return true else it will return false;
 gsub! = replace a value with a new value
-split() = splits a string based off the parameter, and will return an array
+split(",") = splits a string based off the parameter, and will return an array
 
 
 #loops

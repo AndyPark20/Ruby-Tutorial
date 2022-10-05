@@ -32,8 +32,18 @@
 # print "Dear #{user_first_name}, we have successfully updated your residency to #{user_current_location}"
 
 
+print "What Text?"
+text = gets.chomp
+print "Redact what word?"
+redact = gets.chomp
+
 
 text = "Hello world"
 redacted = text.split(" ")
 
-print redacted;
+
+redacted.each do |x|
+    if x == redact
+    puts x
+    end
+end
