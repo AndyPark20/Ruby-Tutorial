@@ -1,10 +1,7 @@
 
 
-num =0
+array= ["apples", "oranges", "pickles"]
 
-loop do
-    num+=1
-    next if num % 2 ==1
-    puts num
-    break if num ==20
-end
+array.each {|value, index|
+    puts index
+}
