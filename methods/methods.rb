@@ -36,8 +36,15 @@ Each do (Array) =Used to loops thru an array, {} can be deleted with the word do
 #Unlike Javascript incrementing or decrementing only works with += -= rather than ++ or --
 #when to use loop do vs for loop
 
+###Data Structures
+##Arrays
+
+
+
+
 
 
 
 #Need to go over
 #While vs until
+#Project on loops and iteration REDACTED
