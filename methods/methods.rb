@@ -7,16 +7,19 @@ gets = gets response from the user
 capitalize= capitalizes the first letter
 include? = looks for a specific value and if found within the value it will return true else it will return false;
 gsub! = replace a value with a new value
+split() = splits a string based off the parameter, and will return an array
 
 
 #loops
 while loop = will loop thru as long as the condition is true
 Until loop = will loop thru as long as the condition is false
 For loop = will loop as long as the condition is true (.. will go to the highest value, ... will stop the second highest value)
+
 #Iterator loops
 loop do = ????
-#Iterator loops for Array
-Each = Used to loops thru an array, {} can be deleted with the word do (i.e. array.each do |x|)
+times do = similar to for loop, but very compact
+Each do (Array) =Used to loops thru an array, {} can be deleted with the word do (i.e. array.each do |x|)
+
 
 
 
