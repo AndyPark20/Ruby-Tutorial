@@ -31,7 +31,14 @@
 
 # print "Dear #{user_first_name}, we have successfully updated your residency to #{user_current_location}"
 
-
 books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
 
-print books.sort!
+
+def sorted_it(arr)
+  arr.each do |x|
+    puts x
+  end
+end
+
+
+print sort_it(books)
