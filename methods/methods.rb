@@ -1,5 +1,12 @@
 
 
+
+#operators
+<=> this is a comparison operator 
+0 if the comparison is same
+1 if the first operand is larger than second operand
+-1 if the second operand is larger than first
+
 #Methods
 upcase = capitalizes everything
 downcase = lowercases everything
@@ -10,6 +17,7 @@ gsub! = replace a value with a new value
 split(",") = splits a string based off the parameter, and will return an array
 sort_by = sorts values from smallest to largest (Its like sortby)
 to_s = converts number to string
+sort! = will sort the values chronlogically (numbers will be smallest to largest)
 
 
 #loops
@@ -36,6 +44,7 @@ Hash.new creates a new hash Object
 # IF ! is not in an method, this means that it is safe method, it will not change the original value
 # ?in a method is trying to say that it will show true or false value.
 # gets also adds a blank line just like puts
+# when using splat (*) in a function, the first argument will always be the index 0 value, and the rest will be in an array
 
 ###LOOPS AND ITERATION#####
 #For loop uses 2 or 3 dots, 2 dots mean go to the highest number, 3 dots mean go to the number right before highest number
@@ -51,8 +60,8 @@ Hash.new creates a new hash Object
 #no questions
 
 ###METHODS
-
-
+# you can use * Splat argument to show that you are using more than one argument
+# Blocks do not have a name, they are either defined by do and end or by {}
 
 
 
@@ -64,3 +73,4 @@ Hash.new creates a new hash Object
 #Why does Hash.new == {} equals true? in Javascript its false?
 #ON Slide 1 for Create a Histogram why is there (0) next to Hash.new? (Looks like its just a default value in case the seach value is not there)
 #What does sort_by return?????
+#Blocks vs Methods
