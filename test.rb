@@ -1,24 +1,13 @@
-# my_name = "andy"
-# revised_my_name =my_name.upcase
-
-# puts "original #{my_name} vs. revised #{revised_my_name}"
-
-
-
 =begin
-print vs puts   
+small project to cover all method that has been learned for day1
 =end
 
+print "What is your first name?"
+user_first_name =gets
+print "Where do you currently live?"
+user_current_location = gets
+print "where do you want to live next year?"
+user_preferred_location = gets
 
-# print "What is your name?"
-# user_input = gets
-# print "What is your age?"
-# user_input_age = gets
-
-
-user_name = "andrew"
-user_name.upcase!
-
-print  user_name
-
+print "Hi #{user_first_name}, you currently live in #{user_current_location}, however you want to move to #{user_preferred_location}, is this true?"
 
