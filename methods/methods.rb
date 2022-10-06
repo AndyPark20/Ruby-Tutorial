@@ -21,6 +21,7 @@ to_sym = converts to symbol
 intern = converts to symbol but will internalize
 sort! = will sort the values chronlogically (numbers will be smallest to largest)
 object_id = gets ID of an Object (gives you numerical number)
+select = filter by certain criteria
 
 
 #loops
