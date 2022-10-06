@@ -18,6 +18,7 @@ split(",") = splits a string based off the parameter, and will return an array
 sort_by = sorts values from smallest to largest (Its like sortby)
 to_s = converts to string
 to_sym = converts to symbol
+to_i = converts to integers
 intern = converts to symbol but will internalize
 sort! = will sort the values chronlogically (numbers will be smallest to largest)
 #objects
@@ -25,6 +26,7 @@ object_id = gets ID of an Object (gives you numerical number)
 select = filter by certain criteria
 each_key=iterates over keys
 each_value = iterates over values
+delete = this will delete key/value pairs from an object
 
 
 #loops
@@ -93,3 +95,4 @@ Hash.new creates a new hash Object
 #when calling method do you need to put into ()? or don't need it?
 #to_sym vs intern (symbol methods)
 #if you use Js syntax to write objects does that mean its still symbols? :dog => 1 vs dog:1 ?
+# A night at the movies is creating a variable within the case local or global?
