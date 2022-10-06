@@ -20,8 +20,11 @@ to_s = converts to string
 to_sym = converts to symbol
 intern = converts to symbol but will internalize
 sort! = will sort the values chronlogically (numbers will be smallest to largest)
+#objects
 object_id = gets ID of an Object (gives you numerical number)
 select = filter by certain criteria
+each_key=iterates over keys
+each_value = iterates over values
 
 
 #loops
