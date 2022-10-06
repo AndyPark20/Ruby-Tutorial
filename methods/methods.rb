@@ -18,6 +18,7 @@ split(",") = splits a string based off the parameter, and will return an array
 sort_by = sorts values from smallest to largest (Its like sortby)
 to_s = converts to string
 to_sym = converts to symbol
+intern = converts to symbol but will internalize
 sort! = will sort the values chronlogically (numbers will be smallest to largest)
 object_id = gets ID of an Object (gives you numerical number)
 
@@ -48,6 +49,7 @@ Hash.new creates a new hash Object
 # gets also adds a blank line just like puts
 # when using splat (*) in a function, the first argument will always be the index 0 value, and the rest will be in an array
 #Symbols are immuatable values while strings are (also Symbols are faster in access as they allocate one time in the memory)
+#objects are written like javascript now with colon
 
 ###LOOPS AND ITERATION#####
 #For loop uses 2 or 3 dots, 2 dots mean go to the highest number, 3 dots mean go to the number right before highest number
@@ -85,3 +87,5 @@ Hash.new creates a new hash Object
 #What does sort_by return?????
 #Blocks vs Methods
 #when calling method do you need to put into ()? or don't need it?
+#to_sym vs intern (symbol methods)
+#if you use Js syntax to write objects does that mean its still symbols? :dog => 1 vs dog:1 ?
