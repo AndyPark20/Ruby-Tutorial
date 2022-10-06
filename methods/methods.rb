@@ -16,7 +16,8 @@ include? = looks for a specific value and if found within the value it will retu
 gsub! = replace a value with a new value
 split(",") = splits a string based off the parameter, and will return an array
 sort_by = sorts values from smallest to largest (Its like sortby)
-to_s = converts number to string
+to_s = converts to string
+to_sym = converts to symbol
 sort! = will sort the values chronlogically (numbers will be smallest to largest)
 object_id = gets ID of an Object (gives you numerical number)
 
@@ -46,7 +47,7 @@ Hash.new creates a new hash Object
 # ?in a method is trying to say that it will show true or false value.
 # gets also adds a blank line just like puts
 # when using splat (*) in a function, the first argument will always be the index 0 value, and the rest will be in an array
-#Symbols are immuatable values while strings are
+#Symbols are immuatable values while strings are (also Symbols are faster in access as they allocate one time in the memory)
 
 ###LOOPS AND ITERATION#####
 #For loop uses 2 or 3 dots, 2 dots mean go to the highest number, 3 dots mean go to the number right before highest number

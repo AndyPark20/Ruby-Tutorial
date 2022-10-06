@@ -34,14 +34,13 @@
 
 
 
-matz = { "First name" => "Yukihiro",
-  "Last name" => "Matsumoto",
-  "Age" => 47,
-  "Nationality" => "Japanese",
-  "Nickname" => "Matz"
-}
+strings = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
 
+# Add your code below!
+symbols =[]
 
-matz.each do |x,y|
-  puts matz[y]
+strings.each do |x|
+  symbols.push(x.to_sym)
 end
+
+print symbols
