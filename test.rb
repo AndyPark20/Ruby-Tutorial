@@ -34,9 +34,14 @@
 
 
 
-my_array =[1,2,3,4]
+matz = { "First name" => "Yukihiro",
+  "Last name" => "Matsumoto",
+  "Age" => 47,
+  "Nationality" => "Japanese",
+  "Nickname" => "Matz"
+}
 
-my_array.each do |x,y|
-  puts y
+
+matz.each do |x,y|
+  puts matz[y]
 end
-

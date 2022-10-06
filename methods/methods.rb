@@ -63,6 +63,9 @@ Hash.new creates a new hash Object
 # you can use * Splat argument to show that you are using more than one argument
 # Blocks do not have a name, they are either defined by do and end or by {}
 
+###HASH AND SYMBOLS
+#
+
 
 
 
