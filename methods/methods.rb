@@ -18,6 +18,7 @@ split(",") = splits a string based off the parameter, and will return an array
 sort_by = sorts values from smallest to largest (Its like sortby)
 to_s = converts number to string
 sort! = will sort the values chronlogically (numbers will be smallest to largest)
+object_id = gets ID of an Object (gives you numerical number)
 
 
 #loops
@@ -45,6 +46,7 @@ Hash.new creates a new hash Object
 # ?in a method is trying to say that it will show true or false value.
 # gets also adds a blank line just like puts
 # when using splat (*) in a function, the first argument will always be the index 0 value, and the rest will be in an array
+#Symbols are immuatable values while strings are
 
 ###LOOPS AND ITERATION#####
 #For loop uses 2 or 3 dots, 2 dots mean go to the highest number, 3 dots mean go to the number right before highest number
@@ -64,7 +66,10 @@ Hash.new creates a new hash Object
 # Blocks do not have a name, they are either defined by do and end or by {}
 
 ###HASH AND SYMBOLS
-#
+##Objects
+# : vs ""
+##symbols
+#strings is NOT equal to :symbols
 
 
 
