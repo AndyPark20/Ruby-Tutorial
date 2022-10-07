@@ -41,10 +41,9 @@
 # puts "my_empty_object: #{my_empty_object.object_id}"
 
 
+i=0
 
-def greetings 
-  puts "Hello"
+while i<2
+  print "Hello"
+  i+=1
 end
-
-
-greetings()
