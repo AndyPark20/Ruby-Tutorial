@@ -41,9 +41,18 @@
 # puts "my_empty_object: #{my_empty_object.object_id}"
 
 
-i=0
 
-while i<2
-  print "Hello"
-  i+=1
-end
+
+#  def doesItInclude(param, variable)
+#   if param.include? variable
+#     print "It does include #{variable}"
+#   end
+#  end
+
+#  doesItInclude("Hello", "H")
+
+name ="andy Park"
+name.split(" ")
+
+print name
+
