@@ -33,20 +33,18 @@
 
 
 
+# my_object = Hash.new
+# my_empty_object ={}
 
-movie_ratings = {
-  memento: 3,
-  primer: 3.5,
-  the_matrix: 5,
-  truman_show: 4,
-  red_dawn: 1.5,
-  skyfall: 4,
-  alex_cross: 2,
-  uhf: 1,
-  lion_king: 3.5
-}
-# Add your code below!
-movie_ratings.each do |x,y|
-  puts y
+# puts my_object === my_empty_object
+# puts "my_object_id: #{my_object.object_id}"
+# puts "my_empty_object: #{my_empty_object.object_id}"
+
+
+
+def greetings 
+  puts "Hello"
 end
 
+
+greetings()
