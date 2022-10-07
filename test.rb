@@ -51,8 +51,15 @@
 
 #  doesItInclude("Hello", "H")
 
-name ="andy Park"
-name.split(" ")
+colors = {
+  red:8,
+  blue:4,
+  white:15
+}
 
-print name
+colors =colors.sort_by do |x,y|
+  y
+end
+
+print colors 
 
