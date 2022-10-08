@@ -10,3 +10,39 @@ User can transfer money to other relatives
 Primary user can ONLY see who has the most and least money
 Primary user can delete relatives from the account
 =end
+
+
+#Start with brand new account
+accounts ={}
+
+first_name =nil
+last_name =nil
+
+
+def set_up_account
+    if accounts.keys.length ==0
+        puts "WELCOME to family bank central!"
+        puts "Please enter your first and last name to get started (ie: John Smith):"
+        user_full_name = gets.chomp
+
+        #Why do I need to reassign to the same variable to return an array?
+        user_full_name=user_full_name.split(" ")
+
+        #Loop thru user_full_name with using each_with_index, zero index will be the first name and the rest will be last name
+        user_full_name.each_with_index do |value,index|
+            case index
+            when 0
+                first_name = value
+            else
+                last_name+=value
+            end                
+        end
+    end
+    puts "welcome #{first_name} #{last_name}"
+end
+
+
+set_up_account
+
+
+
