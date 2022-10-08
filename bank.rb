@@ -19,14 +19,19 @@ Primary user can delete relatives from the account
 #Start with brand new account
 $account_list =[]
 
-$first_name =""
-$last_name =""
-
+puts
 puts "WELCOME to family bank central!"
 
+
+####function to set up user account 
 def set_up_account
+
+    first_name =""
+    last_name =""
+
     if $account_list.length ==0
-        puts "Please enter your first and last name to get started (ie: John Smith):"
+        puts
+        print "Please enter your first and last name to get started (ie: John Smith):"
         user_full_name = gets.chomp
 
         #Why do I need to reassign to the same variable to return an array?
@@ -36,15 +41,30 @@ def set_up_account
         user_full_name.each_with_index do |value,index|
             case index
             when 0
-                $first_name = value
+                first_name = value.capitalize
             else
-                $last_name=$last_name+value
+                last_name=last_name+value.capitalize
             end                
         end
     end
-    puts "welcome #{$first_name} #{$last_name}"
-    $account_list.push({first_name:$first_name, last_name:$last_name})
+    puts "Welcome #{first_name} #{last_name}!"
+    puts "Your account is now set up!"
+    puts
+    $account_list.push({first_name:first_name, last_name:last_name})
     
+    #After account set up has been completed, call a prompt what the user wants to do next
+    puts "Here are the list of available banking options:"
+    puts "*Deposit*"
+    puts "*Transfer*"
+    puts "*Withdrawl*"
+    puts "What would you like to do?"
+    user_choice = gets.chomp
+    banking_options(user_choice)
+end
+
+####function to check which banking function to call
+def banking_options(option)
+    puts "options" + " " + option
 end
 
 
