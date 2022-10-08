@@ -12,16 +12,20 @@ Primary user can delete relatives from the account
 =end
 
 
+#Gatchas
+#if need to loop thru array with tracking index --> use each_with_index
+#if need to set up a global variable use $
+
 #Start with brand new account
-accounts ={}
+$account_list =[]
 
-first_name =nil
-last_name =nil
+$first_name =""
+$last_name =""
 
+puts "WELCOME to family bank central!"
 
 def set_up_account
-    if accounts.keys.length ==0
-        puts "WELCOME to family bank central!"
+    if $account_list.length ==0
         puts "Please enter your first and last name to get started (ie: John Smith):"
         user_full_name = gets.chomp
 
@@ -32,17 +36,19 @@ def set_up_account
         user_full_name.each_with_index do |value,index|
             case index
             when 0
-                first_name = value
+                $first_name = value
             else
-                last_name+=value
+                $last_name=$last_name+value
             end                
         end
     end
-    puts "welcome #{first_name} #{last_name}"
+    puts "welcome #{$first_name} #{$last_name}"
+    $account_list.push({first_name:$first_name, last_name:$last_name})
+    
 end
 
 
-set_up_account
+set_up_account()
 
 
 
