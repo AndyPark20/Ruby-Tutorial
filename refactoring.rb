@@ -29,8 +29,9 @@
 # end
 
 
+age = "Hello "
 
-my_array=[1,2,34,4,5,6]
 
+age<< "sir"
 
-my_array.each {|x| puts x % 2 ==0 ? x : "Not an even number!"}
+puts age
