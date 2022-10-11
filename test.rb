@@ -51,15 +51,7 @@
 
 #  doesItInclude("Hello", "H")
 
-colors = {
-  red:8,
-  blue:4,
-  white:15
-}
 
-colors =colors.sort_by do |x,y|
-  y
+5.times do |x|
+  puts "I'm a block!"
 end
-
-print colors 
-
