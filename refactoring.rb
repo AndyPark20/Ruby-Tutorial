@@ -6,3 +6,5 @@ puts "Its True!" if true
 =end
 
 puts "Hello World" unless true
+
+puts 3<4 ? "Hello" : "Goodbyere"
