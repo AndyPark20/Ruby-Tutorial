@@ -8,3 +8,22 @@ puts "Its True!" if true
 puts "Hello World" unless true
 
 puts 3<4 ? "Hello" : "Goodbyere"
+
+
+##### Working on Case Statement
+puts "Hello there!"
+greeting = gets.chomp
+
+# Add your case statement below!
+case greeting
+  when "English"
+    puts "Hello!"
+  when "French"
+    puts "Bonjour!"
+  when "German"
+    puts "Guten Tag!"
+  when "Finnish"
+    puts "Haloo!"
+  else
+    puts "I dont' know that language!"
+end
