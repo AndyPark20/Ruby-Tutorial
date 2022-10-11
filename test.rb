@@ -51,7 +51,8 @@
 
 #  doesItInclude("Hello", "H")
 
+fibs = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
-5.times do |x|
-  puts "I'm a block!"
-end
+doubled_fibs = fibs.collect {|x| x*2}
+
+puts doubled_fibs
