@@ -91,10 +91,10 @@ group_3 = [5.5, 5.1, 3.9, 4.3, 4.9, 3.2, 3.2]
 over_4_feet = Proc.new {|x| x >=4}
 
 # Change these three so that they use your new over_4_feet Proc
-can_ride_1 = group_1.map!(&over_4_feet)
-can_ride_2 = group_2.map!(&over_4_feet)
-can_ride_3 = group_3.mapr!(&over_4_feet)
+can_ride_1 = group_1.each(&over_4_feet)
+can_ride_2 = group_2.each(&over_4_feet)
+can_ride_3 = group_3.each(&over_4_feet)
 
 puts can_ride_1
-puts can_ride_2
-puts can_ride_3
+# puts can_ride_2
+# puts can_ride_3
