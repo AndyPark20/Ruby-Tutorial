@@ -51,13 +51,30 @@
 
 #  doesItInclude("Hello", "H")
 
-def yield_name(name)
-  puts "This is the top of the method"
-  yield("Jenny")
-  puts "<<<this is the middle section>>>"
-  yield(name)
-  puts "this is the bottom end!"
+# def yield_name(name)
+#   puts "This is the top of the method"
+#   yield("Jenny")
+#   puts "<<<this is the middle section>>>"
+#   yield(name)
+#   puts "this is the bottom end!"
+# end
+
+# yield_name("andy") {|x| puts "My name is #{x}"}
+
+
+#Procs
+# floats = [1.2, 3.45, 0.91, 7.727, 11.42, 482.911]
+
+
+# round_down = Proc.new {|x| x.floor}
+
+# ints = floats.map!(&round_down)
+
+# puts ints
+
+floats = [1.2, 3.45, 0.91, 7.727, 11.42, 482.911]
+
+
+floats.each do |x|
+  puts "x is #{xru}"
 end
-
-yield_name("andy") {|x| puts "My name is #{x}"}
-
