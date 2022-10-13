@@ -99,10 +99,10 @@
 # puts can_ride_2
 # puts can_ride_3
 
-my_array = ["raindrops", :kettles, "whiskers", :mittens, :packages]
+odds_n_ends = [:weezard, 42, "Trady Blix", 3, true, 19, 12.345]
 
-# Add your code below!
-symbol_filter = lambda {|x| x.is_a? Symbol}
-symbols = my_array.select(&symbol_filter)
 
-puts symbols
+
+ints = odds_n_ends.select{|x| x.is_a? Integer}
+
+puts ints
