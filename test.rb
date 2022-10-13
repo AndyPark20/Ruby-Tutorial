@@ -99,11 +99,19 @@
 # puts can_ride_2
 # puts can_ride_3
 
-ages = [23, 101, 7, 104, 11, 94, 100, 121, 101, 70, 44]
-
+crew = {
+  captain: "Picard",
+  first_officer: "Riker",
+  lt_cdr: "Data",
+  lt: "Worf",
+  ensign: "Ro",
+  counselor: "Troi",
+  chief_engineer: "LaForge",
+  doctor: "Crusher"
+}
 # Add your code below!
-under_100 = Proc.new {|x| x<100}
+first_half = lambda {|key,value| value<"M"}
 
-youngsters = ages.select(&under_100)
+a_to_m = crew.select(&first_half)
 
-puts youngsters
+puts a_to_m
