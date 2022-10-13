@@ -99,9 +99,10 @@
 # puts can_ride_2
 # puts can_ride_3
 
+my_array = ["raindrops", :kettles, "whiskers", :mittens, :packages]
 
-numbers_array=[1,2,3,4,5]
+# Add your code below!
+symbol_filter = lambda {|x| x.is_a? Symbol}
+symbols = my_array.select(&symbol_filter)
 
-to_something = Proc.new{|x| x.to_s}
-
-puts strings_array=numbers_array.map(&to_something)
+puts symbols
