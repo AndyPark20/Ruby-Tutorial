@@ -99,10 +99,11 @@
 # puts can_ride_2
 # puts can_ride_3
 
-odds_n_ends = [:weezard, 42, "Trady Blix", 3, true, 19, 12.345]
+ages = [23, 101, 7, 104, 11, 94, 100, 121, 101, 70, 44]
 
+# Add your code below!
+under_100 = Proc.new {|x| x<100}
 
+youngsters = ages.select(&under_100)
 
-ints = odds_n_ends.select{|x| x.is_a? Integer}
-
-puts ints
+puts youngsters
