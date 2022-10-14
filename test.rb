@@ -109,9 +109,12 @@ crew = {
   chief_engineer: "LaForge",
   doctor: "Crusher"
 }
-# Add your code below!
-first_half = lambda {|key,value| value<"M"}
 
-a_to_m = crew.select(&first_half)
 
-puts a_to_m
+def loop_over(object)
+  object.map do |x,y|
+    puts "Values from crew: #{y}"
+  end
+end
+
+loop_over(crew)
