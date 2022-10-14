@@ -113,8 +113,13 @@ crew = {
 
 def loop_over(object)
   object.map do |x,y|
-    puts "Values from crew: #{y}"
+    puts "Values from using define: #{y}"
   end
 end
 
 loop_over(crew)
+
+
+create_lambda = lambda {|x,y| puts "Value from using lamda #{y}"}
+
+crew.map(&create_lambda)
