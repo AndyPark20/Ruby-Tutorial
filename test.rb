@@ -111,15 +111,49 @@ crew = {
 }
 
 
-def loop_over(object)
-  object.map do |x,y|
-    puts "Values from using define: #{y}"
-  end
+# # def loop_over(object)
+# #   object.map do |x,y|
+# #     puts "Values from using define: #{y}"
+# #   end
+# # end
+
+# # loop_over(crew)
+
+
+# create_lambda = lambda {|x,y| puts "Value from using lamda #{y}"}
+
+# crew.map do |x,y|
+#   create_lambda.call(x,y)
+# end
+
+
+# def print_full_name(first_name, last_name)
+#     name = first_name + ' ' + last_name
+#     puts name
+#     #Name is scoped within this function
+# end
+
+
+# print_full_name('karen', 'lee') # karen lee
+# print_full_name('bomey', 'lee') # bomey lee
+# puts name # kim
+
+
+# block
+total = 0
+
+crew_map =crew.map {|x,y| y }
+puts total # 6 
+puts "crew_map: #{crew_map}"
+puts "crew #{crew}"
+
+
+total = 0
+[1,2,3].each do |n|
+    total += n # 6
 end
 
-loop_over(crew)
 
 
-create_lambda = lambda {|x,y| puts "Value from using lamda #{y}"}
 
-crew.map(&create_lambda)
+
