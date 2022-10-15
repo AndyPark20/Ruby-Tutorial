@@ -139,21 +139,19 @@ crew = {
 # puts name # kim
 
 
-# block
-total = 0
+name ="andy"
 
-crew_map =crew.map {|x,y| y }
-puts total # 6 
-puts "crew_map: #{crew_map}"
-puts "crew #{crew}"
-
-
-total = 0
-[1,2,3].each do |n|
-    total += n # 6
+def local_scope 
+  name ="Jason"
 end
 
+puts "name from define: #{name}"
 
+3.times do |x|
+  name ="jason"
+end
+
+puts "name from block #{name}"
 
 
 
