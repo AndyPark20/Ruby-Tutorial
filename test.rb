@@ -188,19 +188,16 @@ crew = {
 # # copyError.display_it
 
 
-class Creature
-  def initialize(name)
-    @name = name
-  end
+
+class ParentDragon
   
   def fight
-    return "Punch to the chops!"
+    puts "From 1000 years ago"
   end
 end
 
-# Add your code below!
-class Dragon < Creature
-  def fight
-    return "Breathes fire!"
-  end
+
+class ChildDragon < ParentDragon
+
+
 end
