@@ -158,11 +158,18 @@ crew = {
 
 #How to create an instance of an object
 
-class Person
-  def initialize(name)
-    @name = name
-  end
+# class Person
+#   def initialize(name)
+#     @name = name
+#   end
+# end
+
+
+# copy = Person.new("Yukihiro")
+
+$age =18
+class My_class
+  $age = 29
 end
 
-
-copy = Person.new("Yukihiro")
+puts $age
