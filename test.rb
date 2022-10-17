@@ -175,14 +175,32 @@ crew = {
 # puts $age
 
 
-class ErrorMessage
-  def display_it
-    puts "Error Error!"
+# class ErrorMessage
+#   def display_it
+#     puts "Error Error!"
+#   end
+# end
+
+
+
+
+# copyError = ErrorMessage.new
+# # copyError.display_it
+
+
+class Creature
+  def initialize(name)
+    @name = name
+  end
+  
+  def fight
+    return "Punch to the chops!"
   end
 end
 
-
-
-
-copyError = ErrorMessage.new
-# copyError.display_it
+# Add your code below!
+class Dragon < Creature
+  def fight
+    return "Breathes fire!"
+  end
+end
