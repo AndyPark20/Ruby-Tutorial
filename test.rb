@@ -167,9 +167,22 @@ crew = {
 
 # copy = Person.new("Yukihiro")
 
-$age =18
-class My_class
-  $age = 29
+# $age =18
+# class My_class
+#   $age = 29
+# end
+
+# puts $age
+
+
+class ErrorMessage
+  def display_it
+    puts "Error Error!"
+  end
 end
 
-puts $age
+
+
+
+copyError = ErrorMessage.new
+# copyError.display_it
