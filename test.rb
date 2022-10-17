@@ -189,21 +189,37 @@ crew = {
 
 
 
-class Creature
-
-  
-  def fight
-    return "Punch to the chops!"
+class Car 
+  #Only scoped to the class Car
+  def initialize(make, model)
+    @make=make
+    @model=model
   end
+
+  def warranty
+      puts "Please enter your year"
+      @user_year = gets.chomp
+  end
+
 end
 
-# # Add your code below!
-class Dragon < Creature
-  def fight
-  puts "Instead of breathing fire..."
-   super
-  end
+
+class Mercedes < Car
+    def warranty
+      super
+      puts @user_year >=15 ? "Sorry your warranty expired on your #{@make} #{@model}" : "Please take to the nearest authorized dealership #{@make} #{@model}"
+    end
 end
 
 
-puts Dragon.new.fight
+puts "Please enter your make:"
+user_make = gets.chomp
+puts "Please enter your model:"
+user_model = gets.chomp
+
+
+Car(user_make, user_model)
+
+puts Mercedes.new.warranty
+
+
