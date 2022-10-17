@@ -156,4 +156,13 @@ crew = {
 # create_lambda = lambda {|x| puts x}
 
 
+#How to create an instance of an object
 
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+
+
+copy = Person.new("Yukihiro")
