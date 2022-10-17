@@ -189,15 +189,23 @@ crew = {
 
 
 
-class ParentDragon
+class Creature
+  def initialize(name)
+    @name = name
+  end
   
   def fight
-    puts "From 1000 years ago"
+    return "Punch to the chops!"
+  end
+end
+
+# Add your code below!
+class Dragon < Creature
+  def fight
+  puts "Instead of breathing fire..."
+   super
   end
 end
 
 
-class ChildDragon < ParentDragon
-
-
-end
+puts Dragon.fight
