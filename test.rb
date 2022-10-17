@@ -139,19 +139,21 @@ crew = {
 # puts name # kim
 
 
-name ="andy"
+# name ="andy"
 
-def local_scope 
-  name ="Jason"
-end
+# def local_scope 
+#   name ="Jason"
+# end
 
-puts "name from define: #{name}"
+# puts "name from define: #{name}"
 
-3.times do |x|
-  name ="jason"
-end
+# 3.times do |x|
+#   name ="jason"
+# end
 
-puts "name from block #{name}"
+# puts "name from block #{name}"
+
+# create_lambda = lambda {|x| puts x}
 
 
 
