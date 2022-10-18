@@ -12,6 +12,11 @@ class Computer
     def create(filename)
         time = Time.now
         @files[filename] = time
+
+        puts "#{filename} was created @ time"
     end
 
+    def Computer.get_users
+        return @@users
+      end
 end
