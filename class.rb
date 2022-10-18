@@ -9,4 +9,9 @@ class Computer
         @@users[username] = password
     end
 
+    def create(filename)
+        time = Time.now
+        @files[filename] = time
+    end
+
 end
