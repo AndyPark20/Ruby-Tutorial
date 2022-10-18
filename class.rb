@@ -1,5 +1,9 @@
 
 class Chef 
+    @@name ="andy"
+    def chef_name
+        puts @@name
+    end
 
     def asian_food
         puts "I can make Korean food!"
@@ -23,6 +27,7 @@ class New_chef < Chef
 end
 
 
+
 another_chef = New_chef.new()
 
-another_chef.italian_food
+another_chef.chef_name
