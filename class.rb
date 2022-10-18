@@ -1,27 +1,16 @@
-class Computer
-    #class variable
-    @@users ={}
-    def intialize(username,password)
-        #instance variable
-        @username = username
-        @password = password
-        @files ={}
-        @@users[username] = password
+
+class Person
+    def initialize(name, age)
+        @name = name
+        @age=age
     end
 
-    def create(filename)
-        time = Time.now
-        @files[filename] = time
-
-        puts "#{filename} was created @ time"
+    public
+    def test
+        puts "#{@name} is #{@age}!"
     end
 
-    def Computer.get_users
-        return @@users
-      end
 end
 
-
-
-#Creating an instance
-my_computer = Computer.new("andy123", "park456")
+copy_person = Person.new("andy",26)
+copy_person.test
