@@ -20,3 +20,8 @@ class Computer
         return @@users
       end
 end
+
+
+
+#Creating an instance
+my_computer = Computer.new("andy123", "park456")
