@@ -1,22 +1,26 @@
 module Calculator
 
-    def add_inventory(value)
-        return value +value
-    end
+    MASTERINVENTORY=14
 
+    def add_inventory(value)
+        MASTERINVENTORY + value
+    end
 end
 
 
 
 
 class Production
+    include Calculator
+
     attr_accessor :product
     attr_accessor :origin
-    attr_inventory :inventory
+    attr_accessor :inventory
     @@actual_inventory = 0
-    def initialize(product, origin)
+    def initialize(product, origin, inventory)
         @product = product
         @origin = origin
+        @inventory = inventory
     end
 
     public
@@ -31,6 +35,7 @@ class Production
 end
 
 
-new_production = Production.new("kimchi", "south korea")
+new_production = Production.new("kimchi", "south korea",1)
 
-new_production.origin_country
+puts new_production.add_inventory(2)
+
