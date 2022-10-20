@@ -1,7 +1,19 @@
+module Calculator
+
+    def add_inventory(value)
+        return value +value
+    end
+
+end
+
+
+
+
 class Production
     attr_accessor :product
     attr_accessor :origin
-
+    attr_inventory :inventory
+    @@actual_inventory = 0
     def initialize(product, origin)
         @product = product
         @origin = origin
