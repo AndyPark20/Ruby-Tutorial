@@ -7,12 +7,18 @@ class Production
         @origin = origin
     end
 
-    def print_out_inventory
-        puts "We have #{@product} which is made from #{@origin}"
+    public
+    def inventory
+        puts "#{@product} is currently available"
+    end
+
+    private
+    def origin_country
+        puts "#{origin} is confidential"
     end
 end
 
 
-new_production = Production.new("Kimchi", "South Korea")
+new_production = Production.new("kimchi", "south korea")
 
-new_production.print_out_inventory
+new_production.origin_country
