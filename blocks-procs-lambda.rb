@@ -33,3 +33,7 @@ end
 # 10/21/2022 --> notes 
 #Blocks and Yields go together!
 #Procs and lambda will always use "&" when passed as an argument
+
+#oop1
+#@@ class variable will share the value with all classess (Parent, child, etc...)
+#@ instance variable will only share with the certain instance that was created. 
