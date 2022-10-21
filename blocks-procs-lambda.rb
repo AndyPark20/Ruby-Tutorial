@@ -28,3 +28,8 @@ print_lambda = lambda {|x|puts "from lambda #{x}"}
 grade_sorter(grades) do |x|
     puts "from lambda #{x}"
 end
+
+
+# 10/21/2022 --> notes 
+#Blocks and Yields go together!
+#Procs and lambda will always use "&" when passed as an argument
