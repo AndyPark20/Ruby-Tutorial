@@ -1,9 +1,30 @@
 
+grades = [92,95,45]
 
-def proc_demo 
-    print_proc = Proc.new {|x| return "From inside of Proc"}
-    print_proc.call
-    puts "Hello from out side of proc"
+
+
+def grade_sorter(grades)
+    grades.each do |z|
+       yield(z)
+        # puts "From calling method "
+    end
 end
 
-proc_demo
+
+#block
+# grade_sorter(grades) do |x|
+#     puts "grades are #{x}"
+# end
+
+
+#procs
+# print_proc=Proc.new {|x| puts x}
+
+
+#lambda
+print_lambda = lambda {|x|puts "from lambda #{x}"}
+
+# grade_sorter(grades, &print_lambda)
+grade_sorter(grades) do |x|
+    puts "from lambda #{x}"
+end
