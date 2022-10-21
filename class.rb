@@ -12,5 +12,6 @@ def time do |x|
     puts x if x==4
 end
 
-check_values = array.map(&new_time)
+# check_values = array.map(&new_time)
 
+check_values= array.map
