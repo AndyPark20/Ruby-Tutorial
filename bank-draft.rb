@@ -82,13 +82,12 @@ def new_or_existing_user(user_response)
         user_ssn = gets.chomp
 
         ##check to see if user_ssn is 8 digits
-        case user_ssn
-        when user_ssn.length.to_i < 8
+        
+        while user_ssn.length.to_i < 8
             print "Please re-enter your 8 digit SSN:"
-        else
-            print user_ssn.length.to_i
-            print "Great!"
+            user_ssn = gets.chomp
         end
+       print "Great! #{user_ssn}"
     else
         print "Please re-enter Y or N:"
         $existing_new_user = gets.chomp.downcase
