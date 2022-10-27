@@ -38,7 +38,7 @@ class LogInSignUp
     end
 
     def create_new_user_account
-      puts "HAHAH!"
+      puts "Hello #{@ast_name} #{@password} #{@ssn}"
     end
 
 end
@@ -90,6 +90,9 @@ def new_or_existing_user(user_response)
             print "Please re-enter your 8 digit SSN:"
             user_ssn = gets.chomp
         end
+
+        instance_for_log = LogInSignUp.new(user_last_name_input,user_password_input, user_ssn_input)
+        instance_for_log.create_new_user_account
         
     else
         print "Please re-enter Y or N:"
