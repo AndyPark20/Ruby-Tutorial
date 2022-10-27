@@ -54,6 +54,9 @@ $existing_new_user = gets.chomp.downcase
 
 # Method to determine if the user is new or existing customer
 def new_or_existing_user(user_response)
+
+    
+
     case user_response
     when 'y'
         #Ask for credentials that will be used to validate sign in
@@ -87,7 +90,7 @@ def new_or_existing_user(user_response)
             print "Please re-enter your 8 digit SSN:"
             user_ssn = gets.chomp
         end
-       print "Great! #{user_ssn}"
+        
     else
         print "Please re-enter Y or N:"
         $existing_new_user = gets.chomp.downcase
