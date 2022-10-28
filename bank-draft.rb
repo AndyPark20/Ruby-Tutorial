@@ -40,7 +40,7 @@ class LogInSignUp
 
     def create_new_user_account
         new_user = {first: @first_name, last: @last_name, password: @password, ssn: @ssn}
-        @@user_info.merge!(new_user)
+        @@user_info.push(new_user)
       puts @@user_info
     end
 
