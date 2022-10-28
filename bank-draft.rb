@@ -38,7 +38,7 @@ class LogInSignUp
     end
 
     def create_new_user_account
-      puts "Hello #{@ast_name} #{@password} #{@ssn}"
+    #   puts "Hello #{@ast_name} #{@password} #{@ssn}"
     end
 
 end
@@ -87,7 +87,7 @@ def new_or_existing_user(user_response)
         user_password = gets.chomp!
         print "Please enter your 8 digit SSN number:"
         user_ssn = gets.chomp!
-        pint "from when #{user_first_name}"
+        print "from when #{user_last_name}"
         ##check to see if user_ssn is 8 digits
         
         while user_ssn.length.to_i < 8
