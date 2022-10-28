@@ -54,7 +54,7 @@ $existing_new_user = gets.chomp.downcase
 
 # Method to determine if the user is new or existing customer
 def new_or_existing_user(user_response)
-    user_last_name_input =nil
+    user_last_name_input = nil
     user_first_name =nil
     user_password_input= nil
     user_snn = nil
@@ -80,19 +80,19 @@ def new_or_existing_user(user_response)
 
     when 'n'
         print "Please enter your first name:"
-        user_first_name = gets.chomp
+        user_first_name = gets.chomp!
         print "Please enter your last name:"
-        user_last_nane = gets.chomp
+        user_last_nane = gets.chomp!
         print "Please enter your password:"
-        user_password = gets.chomp
+        user_password = gets.chomp!
         print "Please enter your 8 digit SSN number:"
-        user_ssn = gets.chomp
-
+        user_ssn = gets.chomp!
+        pint "from when #{user_first_name}"
         ##check to see if user_ssn is 8 digits
         
         while user_ssn.length.to_i < 8
             print "Please re-enter your 8 digit SSN:"
-            user_ssn = gets.chomp
+            user_ssn = gets.chomp!
         end
         print "result:#{user_last_name_input}"
         instance_for_log = LogInSignUp.new(user_last_name_input,user_password_input, user_ssn_input)
