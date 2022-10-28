@@ -19,7 +19,8 @@ class LogInSignUp
     
     attr_accessor :last_name, :password, :ssn
 
-    def initialize(last_name, password, ssn)
+    def initialize(first_name,last_name, password, ssn)
+        @first_name = first_name
         @last_name = last_name
         @password=password
         @ssn=ssn
@@ -34,11 +35,11 @@ class LogInSignUp
                 puts "sorry access denied!"
                 return
             end
-        end
+        ends
     end
 
     def create_new_user_account
-    #   puts "Hello #{@ast_name} #{@password} #{@ssn}"
+      puts "Hello #{@first_name} #{@last_name} #{@password} #{@ssn}"
     end
 
 end
@@ -54,13 +55,8 @@ $existing_new_user = gets.chomp.downcase
 
 # Method to determine if the user is new or existing customer
 def new_or_existing_user(user_response)
-    user_last_name_input = nil
-    user_first_name =nil
-    user_password_input= nil
-    user_snn = nil
+   
     
-    
-
     case user_response
     when 'y'
         #Ask for credentials that will be used to validate sign in
@@ -75,27 +71,27 @@ def new_or_existing_user(user_response)
         print "Please enter the last 4 digits of your SSN:"
         user_ssn_input = gets.chomp.downcase
 
-        instance_for_log = LogInSignUp.new(user_last_name_input,user_password_input, user_ssn_input)
+        instance_for_log = LogInSignUp.new(nil,user_last_name_input,user_password_input, user_ssn_input)
         instance_for_log.validate_log_in_credentials
 
     when 'n'
         print "Please enter your first name:"
-        user_first_name = gets.chomp!
+        user_first_name_input = gets.chomp!
         print "Please enter your last name:"
-        user_last_nane = gets.chomp!
+        user_last_name_input = gets.chomp!
         print "Please enter your password:"
-        user_password = gets.chomp!
+        user_password_input = gets.chomp!
         print "Please enter your 8 digit SSN number:"
-        user_ssn = gets.chomp!
-        print "from when #{user_last_name}"
+        user_ssn_input = gets.chomp!
+    
+
         ##check to see if user_ssn is 8 digits
-        
-        while user_ssn.length.to_i < 8
+        while user_ssn_input.length.to_i < 8
             print "Please re-enter your 8 digit SSN:"
             user_ssn = gets.chomp!
         end
-        print "result:#{user_last_name_input}"
-        instance_for_log = LogInSignUp.new(user_last_name_input,user_password_input, user_ssn_input)
+    
+        instance_for_log = LogInSignUp.new(user_first_name_input,user_last_name_input,user_password_input, user_ssn_input)
         instance_for_log.create_new_user_account
         
     else
