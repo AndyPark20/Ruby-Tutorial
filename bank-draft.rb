@@ -7,7 +7,7 @@
 
 
 #class for log in and sign up method
-class LogInSignUp
+class ParentBank
 
     @@user_info=[
         {first:'andy', last:'park', password:'hello123', ssn:'123456789'},
@@ -44,7 +44,12 @@ class LogInSignUp
       puts @@user_info
     end
 
+    public
     def deposit
+
+    end
+
+    def withdrawl
 
     end
 
@@ -99,6 +104,8 @@ def new_or_existing_user(user_response)
     
         instance_for_log = LogInSignUp.new(user_first_name_input,user_last_name_input,user_password_input, user_ssn_input)
         instance_for_log.create_new_user_account
+
+       
         
     else
         print "Please re-enter Y or N:"
