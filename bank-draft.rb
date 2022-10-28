@@ -35,11 +35,13 @@ class LogInSignUp
                 puts "sorry access denied!"
                 return
             end
-        ends
+        end
     end
 
     def create_new_user_account
-      puts "Hello #{@first_name} #{@last_name} #{@password} #{@ssn}"
+        new_user = {first: @first_name, last: @last_name, password: @password, ssn: @ssn}
+        @@user_info.merge!(new_user)
+      puts @@user_info
     end
 
 end
