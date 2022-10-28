@@ -54,7 +54,11 @@ $existing_new_user = gets.chomp.downcase
 
 # Method to determine if the user is new or existing customer
 def new_or_existing_user(user_response)
-
+    user_last_name_input =nil
+    user_first_name =nil
+    user_password_input= nil
+    user_snn = nil
+    
     
 
     case user_response
