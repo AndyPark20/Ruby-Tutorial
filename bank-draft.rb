@@ -44,6 +44,10 @@ class LogInSignUp
       puts @@user_info
     end
 
+    def deposit
+
+    end
+
 end
 
 
