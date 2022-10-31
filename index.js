@@ -12,9 +12,10 @@ const test =(userName, userSsn, userPassword)=>{
 
 
 function commandLines(){
-    setTimeout(function(){
-        console.log('hello')
-    },3000)
+    console.log("Ok this is the re-enter credentials")
+    var test = prompt("Please enter your name");
+    alert(test)
+    return "Thank you!"
 }
 console.log(test('andy', 56748, 'hello123'))
 
