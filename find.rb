@@ -13,12 +13,12 @@ def check_credentials(user_name, user_ssn, user_password)
 
     user_found = info.find {|users| users[:name] == user_name && users[:ssn] == user_ssn && users[:password] == user_password } 
 
-    puts user_found ? "Welcome back #{user_found[:name]}" : "Access denied!"
+    puts user_found ? "Welcome back #{user_found[:name]}" : "Access denied! #{access_message}"
     
 end 
 
 def access_message
-    print "Please re-enter your credentials"
+    puts "Please re-enter your credentials"
 end
 
-check_credentials('andy', '6789', 'hello1231')
+check_credentials('andy', '6789', 'hello123')
