@@ -30,3 +30,5 @@
 
 # puts "Denied! #{sleep(5)}"
 
+puts "Denied"
+sleep(5)
