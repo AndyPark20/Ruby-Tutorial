@@ -5,11 +5,10 @@ const users =[
     {name:'Jared', ssn:7899, password:'goodbye123'}
 ]
 
-const test =()=>{
-    const userFound = users.map((values,index)=>{
-        if(values.name)
-    })
+const test =(userName, userSsn, userPassword)=>{
+    const userFound = users.filter(users=>{users.name === userName && users.ssn === userSsn && users.password === userPassword })
+    
+    return userFound.length;
+
 }
-
-
-test('andy', 5678, 'hello123')
+console.log(test('andy', '123sn', 'hello123'))
