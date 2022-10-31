@@ -21,4 +21,4 @@ def access_message
     puts "Please re-enter your credentials"
 end
 
-check_credentials('andy', '6789', 'hello123')
+check_credentials('andy', '6789', 'hello123s')
