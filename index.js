@@ -6,9 +6,15 @@ const users =[
 ]
 
 const test =(userName, userSsn, userPassword)=>{
-    const userFound = users.filter(users=>{users.name === userName && users.ssn === userSsn && users.password === userPassword })
-    
-    return userFound.length;
-
+    const userFound = users.filter(users=>{ return users.name === userName && users.ssn === userSsn && users.password === userPassword });
+    return userFound.length !==0 ? "Access Granted!" : `Access Denied! ${commandLines()}`;
 }
-console.log(test('andy', '123sn', 'hello123'))
+
+
+function commandLines(){
+    setTimeout(function(){
+        console.log('hello')
+    },3000)
+}
+console.log(test('andy', 56748, 'hello123'))
+
