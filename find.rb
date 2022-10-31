@@ -17,4 +17,8 @@ def check_credentials(user_name, user_ssn, user_password)
     
 end 
 
-check_credentials('andy', '6789', 'hello123')
+def access_message
+    print "Please re-enter your credentials"
+end
+
+check_credentials('andy', '6789', 'hello1231')
