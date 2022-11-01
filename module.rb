@@ -8,13 +8,12 @@ module Tools
 
 end
 
-class Dynamic
-include Tools
 
+class Paper
+    include Tools
 end
 
 
 
-
-testing = Dynamic.new
-testing.greetings
+pen = Paper.new
+pen.greetings
