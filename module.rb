@@ -8,8 +8,13 @@ module Tools
 
 end
 
+class Dynamic
+include Tools
+
+end
 
 
 
-include 'Tools'
-Tools.greetings
+
+testing = Dynamic.new
+testing.greetings
