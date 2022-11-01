@@ -7,3 +7,9 @@ module Tools
     end
 
 end
+
+
+
+
+include 'Tools'
+Tools.greetings

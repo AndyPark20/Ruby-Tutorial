@@ -59,7 +59,7 @@ end
 
 #class for log in and sign up method
 class Account
-    include Methods
+
 
     USER_INFO=[
         {first: 'andy', last: 'park', password: 'hello123', ssn: '123456789'},
