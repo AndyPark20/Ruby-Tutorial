@@ -9,7 +9,8 @@
         puts " - Deposit"
         puts " - Withdrawal"
         puts " - Transfer"
-        user_input_command = gets.chomp
+        print "Please enter from options above:"
+        user_input_command = gets.chomp.downcase
     end
  end
 
@@ -41,6 +42,8 @@ class Account
         if user_found 
             puts "Welcome back #{user_found[:first]} #{user_found[:last]}!"
             BankFunction.prompt_commands
+            user_function_decision = gets.chomp.downcase!
+          
         else
           puts "Access Denied!"
           new_or_existing_user('y')
