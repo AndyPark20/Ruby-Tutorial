@@ -11,7 +11,15 @@
         puts " - Transfer"
         print "Please enter from options above:"
         user_input_command = gets.chomp.downcase
+        deposit_function(user_input_command)
     end
+
+    def self.deposit_function(command_input)
+        puts "Ok you will like to #{command_input}"
+        print "Please enter how much you will like to deposit:"
+        user_deposit_input = gets.chomp
+    end
+
  end
 
 
