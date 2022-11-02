@@ -5,10 +5,10 @@
 
  module BankFunction
     def self.prompt_commands
-        puts "What would you like to do?"
-        puts "Deposit"
-        puts "Withdrawl"
-        puts "Transfer"
+        puts "What would you like to do:"
+        puts " - Deposit"
+        puts " - Withdrawal"
+        puts " - Transfer"
         user_input_command = gets.chomp
     end
  end
