@@ -3,10 +3,22 @@
  #This feature will allow user to either sign up for an account.
  #Or log in with their last name,last 4 digits of their social security number, and password.        
 
+ module BankFunction
+    def self.prompt_commands
+        puts "What would you like to do?"
+        puts "Deposit"
+        puts "Withdrawl"
+        puts "Transfer"
+        user_input_command = gets.chomp
+    end
+ end
 
 
 #class for log in and sign up method
 class Account
+
+    #insert Module BankFunction into class
+    include BankFunction
 
     USER_INFO=[
         {first: 'andy', last: 'park', password: 'hello123', ssn: '123456789'},
@@ -28,6 +40,7 @@ class Account
         user_found = USER_INFO.find {|user| user[:last].to_s == @last_name && user[:password] == @password && user[:ssn][-4..-1] == @ssn}
         if user_found 
             puts "Welcome back #{user_found[:first]} #{user_found[:last]}!"
+            BankFunction.prompt_commands
         else
           puts "Access Denied!"
           new_or_existing_user('y')
@@ -39,6 +52,8 @@ class Account
         USER_INFO.push({first: @first_name, last: @last_name, password: @password, ssn: @ssn})
         print "Welcome #{@first_name} #{@last_name} to Bank of Invoca!"
     end
+
+    
 end
 
 
