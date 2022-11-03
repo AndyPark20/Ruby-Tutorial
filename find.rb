@@ -34,7 +34,6 @@
                 users[:balance] = user_deposit_input
             end
         end
-
         print "User Balance #{user_accounts}"
     end
 
