@@ -4,15 +4,13 @@
  #Or log in with their last name,last 4 digits of their social security number, and password.        
 
  module BankFunction
-    
+
     def self.prompt_commands
         puts "What would you like to do:"
         puts " - Deposit"
         puts " - Withdrawal"
         puts " - Transfer"
         print "Please enter from options above:"
-        user_input_command = gets.chomp.downcase
-        validate_options(user_input_command)
     end
 
     #method to validate user option command
@@ -31,7 +29,6 @@
         user_deposit_input = gets.chomp
 
         
-
     end
 
  end
@@ -64,7 +61,8 @@ class Account
         if user_found 
             puts "Welcome back #{user_found[:first]} #{user_found[:last]}!"
             BankFunction.prompt_commands
-            user_function_decision = gets.chomp.downcase!
+            user_function_decision = gets.chomp.downcase
+            BankFunction.validate_options(user_function_decision)
           
         else
           puts "Access Denied!"
