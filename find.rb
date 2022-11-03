@@ -17,18 +17,26 @@
     def self.validate_options(user_input_command)
             case user_input_command
             when "deposit"
-            deposit_function(user_input_command)
+                return true
             else
                 prompt_commands
             end
     end
 
-    def self.deposit_function(command_input)
-        puts "Ok you will like to #{command_input}"
+    def self.deposit_function(user_accounts, ssn)
+        puts "Ok you will like to deposit"
         print "Please enter how much you will like to deposit:"
         user_deposit_input = gets.chomp
-
         
+        #Find the user's account and add the deposit amount to their balance
+        user_accounts.each do |users|
+            if users[ssn]
+                print "Hello"
+                users[:balance] = user_deposit_input
+            end
+        end
+
+        print "User Balance #{user_accounts}"
     end
 
  end
@@ -41,8 +49,8 @@ class Account
     include BankFunction
 
     USER_INFO=[
-        {first: 'andy', last: 'park', password: 'hello123', ssn: '123456789'},
-        {first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098'},
+        {first: 'andy', last: 'park', password: 'hello123', ssn: '123456789', balance:20},
+        {first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098', balance:10},
     ]
 
   #If attribute doesn't need to be edited after being initialized, only use reader
@@ -59,11 +67,15 @@ class Account
     def validate_log_in_credentials
         user_found = USER_INFO.find {|user| user[:last].to_s == @last_name && user[:password] == @password && user[:ssn][-4..-1] == @ssn}
         if user_found 
+
             puts "Welcome back #{user_found[:first]} #{user_found[:last]}!"
             BankFunction.prompt_commands
             user_function_decision = gets.chomp.downcase
-            BankFunction.validate_options(user_function_decision)
-          
+
+            if BankFunction.validate_options(user_function_decision)
+                BankFunction.deposit_function(USER_INFO, @ssn)
+            end
+            
         else
           puts "Access Denied!"
           new_or_existing_user('y')
