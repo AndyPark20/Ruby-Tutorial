@@ -11,21 +11,17 @@
         puts " - Transfer"
         print "Please enter from options above:"
         user_input_command = gets.chomp.downcase
+        validate_options(user_input_command)
+    end
 
-        #Check if user input is a valid command
-        case user_input_command
-        when "deposit"
+    #method to validate user option command
+    def self.validate_options(user_input_command)
+            case user_input_command
+            when "deposit"
             deposit_function(user_input_command)
-        else
-            puts "Invalid Option!"
-            puts "Please re-enter the option"
-            puts "What would you like to do:"
-            puts " - Deposit"
-            puts " - Withdrawal"
-            puts " - Transfer"
-            print "Please enter from options above:"
-            user_input_command = gets.chomp.downcase   
-        end
+            else
+                prompt_commands
+            end
     end
 
     def self.deposit_function(command_input)
