@@ -72,7 +72,7 @@ class Account
             user_function_decision = gets.chomp.downcase
 
             if BankFunction.validate_options(user_function_decision)
-                BankFunction.deposit_function(USER_INFO, @ssn)
+                BankFunction.deposit_function(USER_INFO, )
             end
             
         else
