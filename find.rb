@@ -4,6 +4,7 @@
  #Or log in with their last name,last 4 digits of their social security number, and password.        
 
  module BankFunction
+    
     def self.prompt_commands
         puts "What would you like to do:"
         puts " - Deposit"
@@ -28,6 +29,9 @@
         puts "Ok you will like to #{command_input}"
         print "Please enter how much you will like to deposit:"
         user_deposit_input = gets.chomp
+
+        
+
     end
 
  end
