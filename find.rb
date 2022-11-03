@@ -30,7 +30,7 @@
         
         #Find the user's account and add the deposit amount to their balance
         user_accounts.each do |users|
-            if users[:ssn]
+            if users[:ssn][-4..-1] == ssn
                 users[:balance] = user_deposit_input
             end
         end
@@ -72,7 +72,7 @@ class Account
             user_function_decision = gets.chomp.downcase
 
             if BankFunction.validate_options(user_function_decision)
-                BankFunction.deposit_function(USER_INFO, )
+                BankFunction.deposit_function(USER_INFO, @ssn)
             end
             
         else
