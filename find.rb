@@ -30,8 +30,7 @@
         
         #Find the user's account and add the deposit amount to their balance
         user_accounts.each do |users|
-            if users[ssn]
-                print "Hello"
+            if users[:ssn]
                 users[:balance] = user_deposit_input
             end
         end
