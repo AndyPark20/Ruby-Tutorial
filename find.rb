@@ -31,7 +31,7 @@
         #Find the user's account and add the deposit amount to their balance
         user_accounts.each do |users|
             if users[:ssn][-4..-1] == ssn
-                users[:balance] = user[:balance] + user_deposit_input
+                users[:balance] = user_deposit_input
             end
         end
         print "User Balance #{user_accounts}"
@@ -39,6 +39,28 @@
 
  end
 
+ #Create a class that manages all Accounts
+
+ # 1. Sign up (new User)
+ # 2. Log in (Validation existing user)
+
+ # 3. Deposit
+ # 4. Withdrawal
+ # 5. Transfer different accounts
+
+ # 6. Edit personal information (ie phone number, address, etc...)
+ # 7. Close accounts
+
+
+
+class BankFunction
+
+end
+
+class Account
+
+
+end
 
 #class for log in and sign up method
 class Account
@@ -65,7 +87,6 @@ class Account
     def validate_log_in_credentials
         user_found = USER_INFO.find {|user| user[:last].to_s == @last_name && user[:password] == @password && user[:ssn][-4..-1] == @ssn}
         if user_found 
-
             puts "Welcome back #{user_found[:first]} #{user_found[:last]}!"
             BankFunction.prompt_commands
             user_function_decision = gets.chomp.downcase
@@ -86,7 +107,7 @@ class Account
         print "Welcome #{@first_name} #{@last_name} to Bank of Invoca!"
     end
 
-    
+
 end
 
 
@@ -97,7 +118,7 @@ puts "Welcome to Bank of Invoca!"
 print "Are you an existing user?(Y/N):"
 existing_new_user = gets.chomp.downcase
 
-def self.new_or_existing_user(user_response)
+def new_or_existing_user(user_response)
     case user_response
     when 'y'
         #Ask for credentials that will be used to validate sign in
