@@ -22,16 +22,18 @@
 
 class MasterAccount
 
-    def testing
-    @user_info =[
-        {first: 'andy', last: 'park', password: 'hello123', ssn: '123456789', balance:20},
-        {first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098', balance:10}, 
-    ]
+
+    def initialize
+        @user_info = [
+            {first: 'andy', last: 'park', password: 'hello123', ssn: '123456789', balance:20},
+            {first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098', balance:10}, 
+        ]
     end
 
-    def update_master_account
-        puts @user_info
+    def render_master_account
+        puts "Currently #{@user_info}"
     end
+    
 end
 
 class UserAccount
@@ -101,4 +103,4 @@ end
 
 # new_or_existing_user(existing_new_user) 
 instance = MasterAccount.new
-puts instance.update_master_account
+puts instance.render_master_account
