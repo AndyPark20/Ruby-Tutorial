@@ -63,8 +63,8 @@ def new_or_existing_user(user_response)
     print 'Please enter the last 4 digits of your SSN:'
     user_ssn_input = gets.chomp.downcase
 
-    instance_for_log = UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
-    instance_for_log.validate_log_in_credentials
+    UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
+
   when 'n'
     print 'Please enter your first name:'
     user_first_name_input = gets.chomp
