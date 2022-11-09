@@ -30,6 +30,7 @@ class MasterAccount
 end
 
 class UserAccount
+
   attr_accessor :first_name, :last_name, :password, :ssn
 
   def initialize(first_name, last_name, password, ssn)
@@ -63,6 +64,8 @@ def new_or_existing_user(user_response)
     user_ssn_input = gets.chomp.downcase
 
     UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
+
+    
 
   when 'n'
     print 'Please enter your first name:'
