@@ -30,7 +30,6 @@ class MasterAccount
 end
 
 class UserAccount
-
   attr_accessor :first_name, :last_name, :password, :ssn
 
   def initialize(first_name, last_name, password, ssn)
@@ -82,8 +81,8 @@ def new_or_existing_user(user_response)
     end
 
     # #If user_ssn_input is 8 digits, call add_new_user method from Account instance
-    instance_new_user = UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
-    instance_new_user.add_new_user
+    UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
+ 
 
   else
     print 'Please re-enter Y or N:'
