@@ -63,7 +63,8 @@ def new_or_existing_user(user_response)
     print 'Please enter the last 4 digits of your SSN:'
     user_ssn_input = gets.chomp.downcase
 
-    UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
+    instance_user_account =UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
+    
 
     
 
