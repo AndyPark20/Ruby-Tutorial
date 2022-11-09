@@ -18,6 +18,20 @@ class RubyThree
 end
 
 
-class RubyThree < RubyTwo < RubyOne 
+class RubyTwo < RubyOne
 
 end
+
+
+class RubyThree < RubyTwo 
+
+end
+
+class RubyFour < RubyThree
+
+end
+
+instance_it = RubyFour.new
+
+
+instance_it.originalTwo
