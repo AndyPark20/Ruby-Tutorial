@@ -5,33 +5,22 @@ class RubyOne
 end
 
 
-class RubyTwo
+class RubyTwo < RubyOne
   def originalTwo
     print "I am a father"
   end
 end
 
-class RubyThree
+class RubyThree < RubyTwo
   def originalThree
     print "I am a son"
   end 
 end
 
 
-class RubyTwo < RubyOne
-
-end
 
 
-class RubyThree < RubyTwo 
-
-end
-
-class RubyFour < RubyThree
-
-end
-
-instance_it = RubyFour.new
+instance_it = RubyThree.new
 
 
-instance_it.originalTwo
+instance_it.original
