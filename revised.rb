@@ -64,7 +64,7 @@ def new_or_existing_user(user_response)
     user_ssn_input = gets.chomp.downcase
 
     instance_user_account =UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
-    
+
 
     
 
@@ -85,8 +85,8 @@ def new_or_existing_user(user_response)
     end
 
     # #If user_ssn_input is 8 digits, call add_new_user method from Account instance
-    UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
- 
+   inst_user_account=UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
+  
 
   else
     print 'Please re-enter Y or N:'
