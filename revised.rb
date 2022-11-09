@@ -14,10 +14,27 @@
 # 6. Edit personal information (ie phone number, address, etc...)
 # 7. Close accounts
 
+
+class CustomerFunction
+  def deposit
+  end
+
+  def Withdrawal
+  end
+
+  def Transfer
+  end
+end
+
 class SystemFunction
   def add_new_user(_first_name, _last_name, _password, _ssn)
     @user_info_list.push({ first: @first_name, last: @last_name, password: @password, ssn: @ssn })
   end
+
+  def verify_credentials
+
+  end
+
 end
 
 class MasterAccount
@@ -29,7 +46,7 @@ class MasterAccount
   end
 end
 
-class UserAccount
+class UserAccount < SystemFunction
 
   attr_accessor :first_name, :last_name, :password, :ssn
 
