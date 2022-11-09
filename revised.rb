@@ -26,7 +26,7 @@ class CustomerFunction
   end
 end
 
-class SystemFunction
+class SystemFunction < CustomerFunction
   def add_new_user(_first_name, _last_name, _password, _ssn)
     @user_info_list.push({ first: @first_name, last: @last_name, password: @password, ssn: @ssn })
   end
@@ -37,14 +37,6 @@ class SystemFunction
 
 end
 
-class MasterAccount
-  def initialize
-    @user_info_list = [
-      { first: 'andy', last: 'park', password: 'hello123', ssn: '123456789', balance: 20 },
-      { first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098', balance: 10 }
-    ]
-  end
-end
 
 class UserAccount < SystemFunction
 
@@ -56,6 +48,17 @@ class UserAccount < SystemFunction
     @password = password
     @ssn = ssn
   end
+  
+end
+
+class MasterAccount < UserAccount
+  def initialize
+    @user_info_list = [
+      { first: 'andy', last: 'park', password: 'hello123', ssn: '123456789', balance: 20 },
+      { first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098', balance: 10 }
+    ]
+  end
+  
 end
 
 #############################################
@@ -80,7 +83,7 @@ def new_or_existing_user(user_response)
     print 'Please enter the last 4 digits of your SSN:'
     user_ssn_input = gets.chomp.downcase
 
-    instance_user_account =UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
+    instance_user_account = UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
 
 
     
