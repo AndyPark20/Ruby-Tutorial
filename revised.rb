@@ -31,9 +31,6 @@ class SystemFunction < CustomerFunction
     @user_info_list.push({ first: @first_name, last: @last_name, password: @password, ssn: @ssn })
   end
 
-  def verify_credentials
-
-  end
 
 end
 
