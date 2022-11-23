@@ -36,10 +36,9 @@ end
 
 
 class UserAccount < SystemFunction
-
   attr_accessor :first_name, :last_name, :password, :ssn
 
-  def initialize(first_name, last_name, password, ssn)
+  def initialize(first_name, last_namere, password, ssn)
     @first_name = first_name
     @last_name = last_name
     @password = password
@@ -55,7 +54,6 @@ class MasterAccount < UserAccount
       { first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098', balance: 10 }
     ]
   end
-  
 end
 
 #############################################
@@ -92,15 +90,16 @@ def new_or_existing_user(user_response)
     print 'Please enter your 8 digit SSN number:'
     user_ssn_input = gets.chomp
 
-    # #Check to see if user_ssn_input is 8 digits
+   # Check to see if user_ssn_input is 8 digits
     while user_ssn_input.length.to_i < 8
       print 'Please re-enter your 8 digit SSN:'
       user_ssn_input = gets.chomp
     end
 
-    #If user_ssn_input is 8 digits, call add_new_user method from Account instance
+   # If user_ssn_input is 8 digits, call add_new_user method from Account instance
    inst_user_account=UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
-  
+    
+
 
   else
     print 'Please re-enter Y or N:'
