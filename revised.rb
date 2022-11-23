@@ -16,14 +16,14 @@
 
 
 class CustomerFunction
-  def deposit
-  end
+def deposit
+end
 
-  def Withdrawal
-  end
+def Withdrawal
+end
 
-  def Transfer
-  end
+def Transfer
+end
 end
 
 class SystemFunction < CustomerFunction
@@ -81,9 +81,6 @@ def new_or_existing_user(user_response)
     user_ssn_input = gets.chomp.downcase
 
     instance_user_account = UserAccount.new(nil, user_last_name_input, user_password_input, user_ssn_input)
-
-
-    
 
   when 'n'
     print 'Please enter your first name:'
