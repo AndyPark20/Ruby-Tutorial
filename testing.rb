@@ -1,4 +1,15 @@
 print "Hello what is your name?"
 user_info = gets.chomp
 
-puts "#{user_info} nice to meet you my name is macintosh!"
+r
+
+$master_file = ["andy", "jason"]
+
+def find_user
+  $master_file.find do |user|
+    if users == user_info
+      print "welcome #{user}"
+  end
+end
+
+find_user
