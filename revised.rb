@@ -97,8 +97,8 @@ def new_or_existing_user(user_response)
     end
 
    # If user_ssn_input is 8 digits, call add_new_user method from Account instance
-   inst_user_account=UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
-    
+  UserAccount.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
+  UserAccount.first_name
 
 
   else
