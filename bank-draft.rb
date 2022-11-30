@@ -37,7 +37,14 @@ class Account
       end
 
       def deposit
-        USER_INFO.find
+        print "depositing!"
+       USER_INFO.map do |user|
+            puts "last 4 digits from user hash #{user[:ssn][-4..1]}"
+            puts "user input @SSN #{@ssn}"
+            if user[:ssn][-4..1] == @ssn
+                print user[:first]
+            end
+       end
       end
   end
   
@@ -117,7 +124,7 @@ class Account
 
             instance_existing_user = Account.new(first_name,last_name, password, ssn, deposit_amount)
 
-            instance_existing_user.money
+            instance_existing_user.deposit
     end
   end
   
