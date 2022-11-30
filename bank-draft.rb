@@ -4,16 +4,19 @@
 # class for log in and sign up method
 class Account
   USER_INFO =
-      [{first: 'andy', last: 'park', password: 'hello123', ssn: '123456789'}, {first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098'}]
+      [{first: 'andy', last: 'park', password: 'hello123', ssn: '123456789', balance: 20}, 
+       {first: 'Jason', last: 'kim', password: 'bye123', ssn: '135791098'}
+      ]
   
 # If attribute doesn't need to be edited after being initialized, only use reader
   attr_reader :last_name, :password, :ssn
   
-      def initialize(first_name,last_name, password, ssn)
+      def initialize(first_name,last_name, password, ssn, deposit_amount)
           @first_name = first_name
           @last_name = last_name
           @password = password
           @ssn = ssn
+          @deposit_amount = deposit_amount
       end
   
       #Method to check if the users credential exist in the USER_INFO array of objects
@@ -58,17 +61,12 @@ class Account
           print "Please enter the last 4 digits of your SSN:"
           user_ssn_input = gets.chomp.downcase
   
-          instance_for_log = Account.new(nil,user_last_name_input, user_password_input, user_ssn_input)
+          instance_for_log = Account.new(nil,user_last_name_input, user_password_input, user_ssn_input, nil)
           instance_for_log.validate_log_in_credentials
 
-        print "What would you like to do?"
-        puts "Please select from the following options:"
-        puts "- 1 for deposit"
-        puts "- 2 withdraw"
-        puts "- 3transfer"
-        user_function_input = gets.chomp
+    
 
-        existing_bank_user_functionality(user_fuction_input)
+        existing_bank_user_functionality(nil,user_last_name_input, user_password_input, user_ssn_input)
 
       when 'n'
           print "Please enter your first name:"
@@ -87,7 +85,7 @@ class Account
           end 
   
           ##If user_ssn_input is 8 digits, call add_new_user method from Account instance
-          instance_new_user= Account.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input)
+          instance_new_user= Account.new(user_first_name_input, user_last_name_input, user_password_input, user_ssn_input, nil)
           instance_new_user.add_new_user
   
       else
@@ -99,9 +97,21 @@ class Account
 
 
   #Bank Functionality
-  def existing_bank_user_functionality(user_response)
-    case user_response
-        when 'deposit' 
+  def existing_bank_user_functionality(first_name,last_name, password, ssn)
+
+    print "What would you like to do?"
+    puts "Please select from the following options:"
+    puts "- 1 for deposit"
+    puts "- 2 for withdraw"
+    puts "- 3 for transfer"
+    user_function_input = gets.chomp
+
+    case user_function_input
+        when '1' 
+            print "how much would you like to deposit?"
+            deposit_amount = gets.chomp
+
+            instance_existing_user = Account.new(nil)
     end
   end
   
