@@ -9,7 +9,7 @@ class Account
       ]
   
 # If attribute doesn't need to be edited after being initialized, only use reader
-  attr_reader :last_name, :password, :ssn
+  attr_reader :last_name, :password, :ssn, :deposit_amount
   
       def initialize(first_name,last_name, password, ssn, deposit_amount)
           @first_name = first_name
@@ -111,7 +111,9 @@ class Account
             print "how much would you like to deposit?"
             deposit_amount = gets.chomp
 
-            instance_existing_user = Account.new(nil)
+            instance_existing_user = Account.new(first_name,last_name, password, ssn, deposit_amount)
+
+            instance_existing_user.first_name
     end
   end
   
