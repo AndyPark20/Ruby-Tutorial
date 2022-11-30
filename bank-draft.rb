@@ -60,6 +60,16 @@ class Account
   
           instance_for_log = Account.new(nil,user_last_name_input, user_password_input, user_ssn_input)
           instance_for_log.validate_log_in_credentials
+
+        print "What would you like to do?"
+        puts "Please select from the following options:"
+        puts "- 1 for deposit"
+        puts "- 2 withdraw"
+        puts "- 3transfer"
+        user_function_input = gets.chomp
+
+        existing_bank_user_functionality(user_fuction_input)
+
       when 'n'
           print "Please enter your first name:"
           user_first_name_input = gets.chomp
@@ -89,8 +99,10 @@ class Account
 
 
   #Bank Functionality
-  def existing_bank_user_functionality
-    print "What would you like to do?"
+  def existing_bank_user_functionality(user_response)
+    case user_response
+        when 'deposit' 
+    end
   end
   
   new_or_existing_user(existing_new_user) 
