@@ -9,7 +9,7 @@ class Account
       ]
   
 # If attribute doesn't need to be edited after being initialized, only use reader
-  attr_reader :last_name, :password, :ssn, :deposit_amount
+  attr_reader :first_name, :last_name, :password, :ssn, :deposit_amount
   
       def initialize(first_name,last_name, password, ssn, deposit_amount)
           @first_name = first_name
@@ -34,6 +34,10 @@ class Account
       def add_new_user
           USER_INFO.push({first: @first_name, last: @last_name, password: @password, ssn: @ssn})
           print "Welcome #{@first_name} #{@last_name} to Bank of Invoca!"
+      end
+
+      def deposit
+        USER_INFO.find
       end
   end
   
@@ -113,7 +117,7 @@ class Account
 
             instance_existing_user = Account.new(first_name,last_name, password, ssn, deposit_amount)
 
-            instance_existing_user.first_name
+            instance_existing_user.money
     end
   end
   
