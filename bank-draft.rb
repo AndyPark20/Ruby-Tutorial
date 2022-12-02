@@ -38,10 +38,13 @@ class Account
 
       def deposit
         print "depositing!"
+       
        USER_INFO.map do |user|
+        print "User ssn: #{user[:ssn]}"
+        print "Typed ssn: #{@ssn}"
             if user[:ssn][-4..1] == @ssn
                 # assign current balance to a variable
-                user_balance = user[:balance] + @deposit_amount
+                user_balance = user[:balance] + @deposit_amount.parseInt()
                 print "#{user_balance}"
             end
        end
