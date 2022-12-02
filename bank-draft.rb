@@ -44,7 +44,7 @@ class Account
                 # assign current balance to a variable
                 deposit_integer = @deposit_amount.to_i
                 user[:balance] = user[:balance] +  deposit_integer
-                puts "Your total balance is #{user[:balance]}"
+                puts "Your total balance is $#{user[:balance]}"
                 puts "master file: #{USER_INFO}"
             end
        end
