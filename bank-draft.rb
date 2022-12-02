@@ -39,10 +39,10 @@ class Account
       def deposit
         print "depositing!"
        USER_INFO.map do |user|
-            puts "last 4 digits from user hash #{user[:ssn][-4..-1]}"
-            puts "user input @SSN #{@ssn}"
             if user[:ssn][-4..1] == @ssn
-                # print user[:first]
+                # assign current balance to a variable
+                user_balance = user[:balance] + @deposit_amount
+                print "#{user_balance}"
             end
        end
       end
