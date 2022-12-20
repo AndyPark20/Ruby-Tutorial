@@ -9,5 +9,5 @@
 
 
 puts "-" * 20
-20.times {p "hello world"}
+20.times {puts rand(10)}
 puts "-" * 10
