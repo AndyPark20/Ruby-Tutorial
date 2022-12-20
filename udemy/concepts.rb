@@ -1,3 +1,7 @@
-print "Hello World"
-puts "Hello World"
-p "Hello World"
+
+
+def say_hello(greetings)
+  puts greetings
+end
+
+say_hello "Hello World"
