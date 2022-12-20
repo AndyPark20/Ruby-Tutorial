@@ -1,8 +1,13 @@
-puts "Please enter the number the number you want to multiply by 2"
-user_input = gets.chomp
+# puts "Please enter the number the number you want to multiply by 2"
+# user_input = gets.chomp
 
-def multiply(input)
-  p input.to_i * 2
-end
+# def multiply(input)
+#   p input.to_i * 2
+# end
 
-multiply(user_input)
+# multiply(user_input)
+
+
+puts "-" * 20
+20.times {p "hello world"}
+puts "-" * 10
