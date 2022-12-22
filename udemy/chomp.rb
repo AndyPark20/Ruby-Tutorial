@@ -11,3 +11,6 @@
 puts "-" * 20
 20.times {puts rand(10)}
 puts "-" * 10
+
+
+### learning ruby
