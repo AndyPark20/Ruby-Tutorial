@@ -97,6 +97,8 @@ Ask the user for input
 and depending on the number check print out comments
 =end
 
+#terminal working
+
 print "Please enter a number: "
 number = Integer(gets.chomp)
 
