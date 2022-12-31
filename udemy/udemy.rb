@@ -13,7 +13,7 @@ end
 
 
 def integer_calculator
-  print "Method here"
+  5.times{print "hello world"}
 end
 
 integer_value_checker(user_input)
