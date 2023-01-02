@@ -21,8 +21,15 @@
 
 # Arrays
 
-x = (1..6).to_a
-puts "Before testing #{x}"
-puts "Add world at the first of the array #{x.unshift("world cup")}"
-puts "Add world at the end of the array #{x.append("world cup")}"
-puts "Strip duplicates #{x.uniq}"
+# x = (1..6).to_a
+# puts "Before testing #{x}"
+# puts "Add world at the first of the array #{x.unshift("world cup")}"
+# puts "Add world at the end of the array #{x.append("world cup")}"
+# puts "Strip duplicates #{x.uniq}"
+
+
+x =["Apples", "Berry", "Pears"]
+
+x.each do |x|
+  puts "first food is #{x}"
+end
