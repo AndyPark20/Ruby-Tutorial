@@ -37,10 +37,11 @@
 
 #hashes
 
-sample_hash ={a: 1, b: 2, c: 3}
+sample_hash ={a: 1, b: "andy", c: 3}
 my_details =  {'name'=> 'andy', 'age' =>'30'}
 
 
-sample_hash[:d] = 6
+
+sample_hash.select {|key,value| sample_hash.delete(key) if value.is_a?(String) }
 
 puts sample_hash
