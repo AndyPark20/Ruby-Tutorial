@@ -41,7 +41,6 @@ sample_hash ={a: 1, b: 2, c: 3}
 my_details =  {'name'=> 'andy', 'age' =>'30'}
 
 
+sample_hash[:d] = 6
 
-sample_hash.each do |key, value|
-  puts "the class for keys are #{key.class} and the class for values are #{value.class}"
-end
+puts sample_hash
