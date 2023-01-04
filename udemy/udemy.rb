@@ -37,11 +37,12 @@
 
 #hashes
 
-sample_hash ={a: 1, b: "andy", c: 3}
-my_details =  {'name'=> 'andy', 'age' =>'30'}
+hash ={age:32, occupation:'SWE', favorite:'pizza' }
 
+hash.each do |key, value|
+  puts key
+end
 
+# revised_hash = hash.select {|key,value| hash.delete(value) if value.class == 'string'}
 
-sample_hash.select {|key,value| sample_hash.delete(key) if value.is_a?(String) }
-
-puts sample_hash
+# puts revised_hash
