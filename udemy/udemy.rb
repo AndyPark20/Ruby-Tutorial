@@ -40,7 +40,7 @@
 hash ={age:32, occupation:'SWE', favorite:'pizza' }
 
 hash.each do |key, value|
-  puts key
+  puts key.class
 end
 
 # revised_hash = hash.select {|key,value| hash.delete(value) if value.class == 'string'}
