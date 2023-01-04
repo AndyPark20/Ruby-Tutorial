@@ -18,19 +18,21 @@ def get_credentials
   if user_username
     print "Please enter password:"
     user_password = gets.chomp
-
-    print "You have entered username: #{user_username} and password: #{user_password}"
   end
 end
 
+def validate_credentials(username, password)
+
+end
 
 
 def validate_user_prompt
+
   case initial_prompt
     when 'n'
       get_credentials
     when ''
-      puts 'bye'
+      initial_prompt
   end
 end
 
