@@ -1,4 +1,4 @@
-users =[
+$USERS =[
   {username:'andy', password:'password1'},
   {username:'Lewis', password:'password2'},
   {username:'Lance', password:'password3'},
@@ -18,11 +18,13 @@ def get_credentials
   if user_username
     print "Please enter password:"
     user_password = gets.chomp
+    validate_credentials(user_username, user_password)
   end
 end
 
 def validate_credentials(username, password)
-
+    found_user = $USERS.select {|key,value| if key == username && key == password}
+    print found_user
 end
 
 
