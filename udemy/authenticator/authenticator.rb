@@ -6,7 +6,7 @@ $USERS =[
 ]
 
 def initial_prompt
-  print "Please press N to exit out or press ENTER to continue:"
+  print "Please press N to exit out or press y to continue:"
   user_input = gets.chomp.downcase
 end
 
@@ -23,19 +23,22 @@ def get_credentials
 end
 
 def validate_credentials(username, password)
-    found_user = $USERS.select {|key,value| if key == username && key == password}
-    print found_user
-end
-
-
-def validate_user_prompt
-
-  case initial_prompt
-    when 'n'
+    found_user = $USERS.select {|user_info| user_info[:username] == username && user_info[:password] == password}
+    if found_user.length !=0
+      print "Welcome back #{found_user[0][:username]}"
+    else
+      puts "Sorry credentials invalid"
       get_credentials
-    when ''
-      initial_prompt
-  end
+    end
 end
 
-validate_user_prompt
+
+
+def initiate_prompt
+  while initial_prompt != 'y'
+    initial_prompt
+  end
+  get_credentials
+end
+
+initiate_prompt
