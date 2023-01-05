@@ -26,7 +26,7 @@ end
 def validate_credentials(username, password)
     found_user = $USERS.select { |user_info| user_info[:username] == username && user_info[:password] == password }
     if found_user.length !=0
-      print "Welcome back #{ found_user[0][:username] }"
+      print "Welcome back #{found_user[0][:username]}"
     else
       puts "Sorry credentials invalid"
       get_credentials
