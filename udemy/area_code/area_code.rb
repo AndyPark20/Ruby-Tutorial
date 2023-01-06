@@ -16,7 +16,11 @@ def get_city_names()
 end
 
 def get_area_code(user)
-
+  $dial_book.each do |city_name, area_code|
+    if city_name == user.to_sym
+      puts area_code
+    end
+  end
 end
 
 loop do
@@ -30,5 +34,8 @@ loop do
     puts "Which city would you like to view area code for?"
     puts get_city_names
     user_city_choice = gets.chomp.downcase
+    if user_city_choice != ""
+       get_area_code(user_city_choice)
+    end
   end
 end
