@@ -10,9 +10,8 @@ $dial_book = {
 
 
 def get_city_names()
-  $dial_book.each do |city_name, area_code|
-    puts city_name
-  end
+  list_city = $dial_book.keys
+  puts list_city
   puts "Enter your city:"
   user_city_choice =gets.chomp.downcase
   if user_city_choice
