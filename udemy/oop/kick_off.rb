@@ -13,10 +13,16 @@ class Student
 
 
   def to_s
-    "Hello #{@first_name}"
+    "Hello #{@first_name} #{@last_name} welcome to #{email}"
   end
 
 end
 
 andy = Student.new("andy", "park", "hiandy898989", "testing@gmail.com", "1234949")
-jason = Student.new("andy", "park", "hiandy898989", "testing@gmail.com", "1234949")
+jason = Student.new("jason", "kim", "hijason", "testing1234@gmail.com", "95959595")
+
+puts andy
+puts jason
+andy.last_name = jason.last_name
+puts "Revised"
+puts andy
