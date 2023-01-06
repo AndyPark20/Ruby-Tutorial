@@ -13,6 +13,11 @@ def get_city_names()
   $dial_book.each do |city_name, area_code|
     puts city_name
   end
+  puts "Enter your city:"
+  user_city_choice =gets.chomp.downcase
+  if user_city_choice
+    get_area_code(user_city_choice)
+  end
 end
 
 def get_area_code(user)
@@ -32,10 +37,6 @@ loop do
     break
   else
     puts "Which city would you like to view area code for?"
-    puts get_city_names
-    user_city_choice = gets.chomp.downcase
-    if user_city_choice != ""
-       get_area_code(user_city_choice)
-    end
+    get_city_names
   end
 end
