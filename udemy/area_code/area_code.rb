@@ -20,11 +20,7 @@ def get_city_names()
 end
 
 def get_area_code(user)
-  $dial_book.each do |city_name, area_code|
-    if city_name == user.to_sym
-      puts area_code
-    end
-  end
+  puts $dial_book[user.to_sym]
 end
 
 loop do
