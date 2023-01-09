@@ -11,9 +11,8 @@ module CreateCredentials
 
   def self.create_user(username, password, users)
     if username != '' && password != ''
-      users.push({ users[:username] = username, users[:password] = password })
+      users.push({ username: username, password: password })
     end
-    puts users
   end
 end
 
