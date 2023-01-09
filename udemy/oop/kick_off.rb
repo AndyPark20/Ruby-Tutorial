@@ -53,7 +53,6 @@
 # puts andy
 
 
-require "bcrypt"
 
 
 users =[
@@ -61,43 +60,33 @@ users =[
   {username:"jared", password: "password32"}
 ]
 
-# my_password = BCrypt::Password.create("my password")
-# my_password_1 = BCrypt::Password.create("my password")
-# my_password_2 = BCrypt::Password.create("my password")
 
-# puts my_password == "my password"
-# puts my_password_1 == "my password"
-# puts my_password_2 == "my password"
+module Crud
+  require "bcrypt"
 
-# # my_password = BCrypt::Password.new("$2a$12$GFzTKQB9UCGP4MV6RTLti.oUWg.qN/CK4tLRBQnjblM3s0MkTriVq")
-# # puts my_password == "my password"
-
-def create_hash_digest(password)
+  def create_hash_digest(password)
   BCrypt::Password.create(password)
-end
+  end
 
-#Verify password
-def verify_hash_digest(password)
+  #Verify password
+  def verify_hash_digest(password)
   BCrypt::Password.new(password)
-end
+  end
 
-def create_secure_users(list_of_users)
+  def create_secure_users(list_of_users)
   list_of_users.each do |user_record|
     user_record[:password] = create_hash_digest(user_record[:password])
   end
   list_of_users
-end
-
-new_users = create_secure_users(users)
+  end
 
 
-def authenticate_user(username, password, list_of_users)
+  def authenticate_user(username, password, list_of_users)
   list_of_users.each do |user_record|
     if user_record[:username] ==  username && verify_hash_digest(user_record[:password]) == password
       return user_record
     end
   end
   "Credentials were not correct"
+  end
 end
-
-p authenticate_user("jared", "password321", new_users)
