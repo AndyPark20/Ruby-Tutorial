@@ -39,7 +39,15 @@ class Student
   end
 
   def to_s
-    "Hello #{firstname} welcome with the email address of #{email}"
+    "Hello #{@firstname} welcome with the email address of #{@email}"
   end
 
 end
+
+andy = Student.new("Andy", "Park", "test@gmail.com", "test", "test123")
+
+puts andy
+
+andy.email = "revised@gmail.com"
+
+puts andy
