@@ -55,13 +55,20 @@
 
 require "bcrypt"
 
-my_password = BCrypt::Password.create("my password")
-my_password_1 = BCrypt::Password.create("my password")
-my_password_2 = BCrypt::Password.create("my password")
+# my_password = BCrypt::Password.create("my password")
+# my_password_1 = BCrypt::Password.create("my password")
+# my_password_2 = BCrypt::Password.create("my password")
 
-puts my_password == "my password"
-puts my_password_1 == "my password"
-puts my_password_2 == "my password"
-
-# my_password = BCrypt::Password.new("$2a$12$GFzTKQB9UCGP4MV6RTLti.oUWg.qN/CK4tLRBQnjblM3s0MkTriVq")
 # puts my_password == "my password"
+# puts my_password_1 == "my password"
+# puts my_password_2 == "my password"
+
+# # my_password = BCrypt::Password.new("$2a$12$GFzTKQB9UCGP4MV6RTLti.oUWg.qN/CK4tLRBQnjblM3s0MkTriVq")
+# # puts my_password == "my password"
+
+def create_hash_digest(password)
+  BCrypt::Password.create(password)
+end
+
+new_password = create_hash_digest("password1")
+puts new_password == "password2"
