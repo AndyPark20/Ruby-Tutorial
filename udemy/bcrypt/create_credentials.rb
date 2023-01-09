@@ -1,5 +1,6 @@
 
 
+users =[]
 
 module CreateCredentials
   require "bcrypt"
@@ -9,9 +10,12 @@ module CreateCredentials
   end
 
   def self.create_user(username, password, users)
-    users.each do |user_profile|
-      user_profile[:username] = username
-      user_password[:password] = password
+    if username != '' && password != ''
+      users.push({ users[:username] = username, users[:password] = password })
     end
+    puts users
   end
 end
+
+
+puts CreateCredentials.create_user('hiandy', 'hello', users)
