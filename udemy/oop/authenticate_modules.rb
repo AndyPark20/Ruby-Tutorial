@@ -54,34 +54,27 @@
 
 
 
-
-users =[
-  {username:"andy", password: "password123"},
-  {username:"jared", password: "password32"}
-]
-
-
 module Crud
   require "bcrypt"
+  puts "Module activated"
 
-  def create_hash_digest(password)
+  def self.create_hash_digest(password)
   BCrypt::Password.create(password)
   end
 
-  #Verify password
-  def verify_hash_digest(password)
+  #Verify password -- class method not an instance of an object
+  def self.verify_hash_digest(password)
   BCrypt::Password.new(password)
   end
 
-  def create_secure_users(list_of_users)
+  def self.create_secure_users(list_of_users)
   list_of_users.each do |user_record|
     user_record[:password] = create_hash_digest(user_record[:password])
   end
   list_of_users
   end
 
-
-  def authenticate_user(username, password, list_of_users)
+  def self.authenticate_user(username, password, list_of_users)
   list_of_users.each do |user_record|
     if user_record[:username] ==  username && verify_hash_digest(user_record[:password]) == password
       return user_record
