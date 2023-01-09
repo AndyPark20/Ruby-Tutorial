@@ -28,26 +28,35 @@
 # puts andy
 
 
-class Student
-  attr_accessor :first_name, :last_name, :email, :username, :password
+# class Student
+#   attr_accessor :first_name, :last_name, :email, :username, :password
 
-  def initialize(firstname, lastname, email, username, password)
-    @first_name = firstname
-    @last_name = lastname
-    @email = username
-    @password = password
-  end
+#   def initialize(firstname, lastname, email, username, password)
+#     @first_name = firstname
+#     @last_name = lastname
+#     @email = username
+#     @password = password
+#   end
 
-  def to_s
-    "Hello #{@firstname} welcome with the email address of #{@email}"
-  end
+#   def to_s
+#     "Hello #{@firstname} welcome with the email address of #{@email}"
+#   end
 
-end
+# end
 
-andy = Student.new("Andy", "Park", "test@gmail.com", "test", "test123")
+# andy = Student.new("Andy", "Park", "test@gmail.com", "test", "test123")
 
-puts andy
+# puts andy
 
-andy.email = "revised@gmail.com"
+# andy.email = "revised@gmail.com"
 
-puts andy
+# puts andy
+
+
+require "bcrypt"
+
+my_password = BCrypt::Password.create("my password")
+
+puts my_password
+puts my_password.version
+puts my_password == "my password"
