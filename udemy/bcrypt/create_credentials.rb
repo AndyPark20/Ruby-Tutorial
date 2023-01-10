@@ -2,7 +2,7 @@
 
 users =[]
 
-module CreateCredentials
+module Credentials
   require "bcrypt"
 
   def self.create_hash_password(password)
@@ -10,11 +10,9 @@ module CreateCredentials
   end
 
   def self.create_user(username, password, users)
-    if username != '' && password != ''
       users.push({ username: username, password: password })
-    end
   end
 end
 
 
-puts CreateCredentials.create_user('hiandy', 'hello', users)
+puts Credentials.create_user('hiandy', 'hello', users)
