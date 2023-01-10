@@ -10,7 +10,11 @@ module Credentials
   end
 
   def self.create_user(username, password, users)
-      users.push({ username: username, password: password })
+    users.push({ username: username, password: password })
+  end
+
+  def self.validate_password(password)
+    validated_password = BCrypt::Password.new(password)
   end
 end
 
