@@ -13,14 +13,16 @@ module Credentials
     users.push({ username: username, password: password })
   end
 
-  def self.validate_password(password)
+  def self.validate_password(password, users)
     users.each do |user_profile|
       if BCrypt::Password.new(user_profile[:password]) == password
         user_profile[:username]
+      end
     end
   end
+
 end
 
 
 puts Credentials.create_user('hiandy', 'hello', users)
-puts Credentials.validate_password('hello')
+puts Credentials.validate_password('hello', users)
