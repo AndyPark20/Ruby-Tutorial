@@ -13,8 +13,8 @@ class MasterUserList
     @password = password
   end
 
-  def create_password_hash(password)
-    Credentials.create_hash_password(@password)
+  def create_hash_password(password)
+    Credentials.create_hash_password(password)
   end
 
   def to_s
@@ -22,6 +22,12 @@ class MasterUserList
   end
 end
 
+print "Please enter username:"
+user_username = gets.chomp
+print "Please enter password:"
+user_password = gets.chomp
 
-copy_master_user_list = MasterUserList.new('hiandy', 'hello123')
-puts copy_master_user_list.create_password_hash('hell0123')
+if(user_username && user_password)
+  copy_master_user_list = MasterUserList.new(user_username, user_password)
+  # copy_master_user_list.create_hash_password(copy_master_user_list[password])
+end
