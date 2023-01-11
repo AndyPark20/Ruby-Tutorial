@@ -1,7 +1,3 @@
-
-
-
-
 module Credentials
   require "bcrypt"
 
@@ -24,7 +20,3 @@ module Credentials
     end
   end
 end
-
-
-Credentials.create_user('hiandy', 'password123', users)
-Credentials.validate_password('password1234', users)
