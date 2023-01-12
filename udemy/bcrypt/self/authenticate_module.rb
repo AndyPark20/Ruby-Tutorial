@@ -1,9 +1,7 @@
-
-
-
+require_relative 'create_credentials.rb'
 
 class MasterUserList
-  require_relative 'create_credentials.rb'
+  include Credentials
   attr_accessor :username, :password
 
   USERS = []
@@ -11,10 +9,6 @@ class MasterUserList
   def initialize(username, password)
     @username = username,
     @password = password
-  end
-
-  def create_hash_password(password)
-    Credentials.create_hash_password(password)
   end
 
   def to_s
@@ -29,5 +23,7 @@ user_password = gets.chomp
 
 if(user_username && user_password)
   copy_master_user_list = MasterUserList.new(user_username, user_password)
-  # copy_master_user_list.create_hash_password(copy_master_user_list[password])
 end
+
+puts "Creating user password"
+copy_master_user_list.create_hash_password(copy_master_user_list.password)
